@@ -276,33 +276,33 @@ system design.Modernization: Led migration of legacy JSP applications to Java 21
           </a>
         </div>
 
-     <section id="contact" class="section">
+  <section id="contact" class="section">
   <div class="container">
     <h2>Let's Connect</h2>
-    <p class="lead">Available for architectural consulting, AI innovation projects, and professional networking.</p>
+    <p class="lead">Available for architectural consulting, AI innovation, and professional networking.</p>
 
     <div class="contact-grid">
       <div class="contact-form-wrap">
-        <form id="contactForm" class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
           <div class="form-grid">
             <div class="field">
               <label for="cfName">Name</label>
-              <input type="text" id="cfName" placeholder="Your Name">
+              <input type="text" id="cfName" name="name" required placeholder="Your Name">
               <div id="cfNameHint" class="field-hint"></div>
             </div>
             <div class="field">
               <label for="cfEmail">Email</label>
-              <input type="email" id="cfEmail" placeholder="your@email.com">
+              <input type="email" id="cfEmail" name="email" required placeholder="your@email.com">
               <div id="cfEmailHint" class="field-hint"></div>
             </div>
             <div class="field form-span-2">
               <label for="cfSubject">Subject</label>
-              <input type="text" id="cfSubject" placeholder="How can I help?">
+              <input type="text" id="cfSubject" name="subject" required placeholder="How can I help?">
               <div id="cfSubjectHint" class="field-hint"></div>
             </div>
             <div class="field form-span-2">
               <label for="cfMessage">Message</label>
-              <textarea id="cfMessage" placeholder="Describe your project or inquiry..."></textarea>
+              <textarea id="cfMessage" name="message" required placeholder="Describe your project or inquiry..."></textarea>
               <div id="cfMessageHint" class="field-hint"></div>
             </div>
           </div>
@@ -317,14 +317,14 @@ system design.Modernization: Led migration of legacy JSP applications to Java 21
         <article class="card contact-method">
           <h3>Professional Network</h3>
           <p>For the fastest response, message me directly on LinkedIn.</p>
-          <a href="https://www.linkedin.com/in/YOUR_USERNAME/" target="_blank" class="btn-outline">
+          <a href="https://www.linkedin.com/in/jugal-mahendra/" target="_blank" class="btn-outline">
             Open LinkedIn Messenger
           </a>
         </article>
         
         <article class="card contact-method">
           <h3>Current Location</h3>
-          <p>Based in <strong>Austin/Leander, TX</strong>.<br>Open to local and remote opportunities.</p>
+          <p>Based in <strong>Austin/Leander, TX</strong>.</p>
         </article>
       </div>
     </div>
