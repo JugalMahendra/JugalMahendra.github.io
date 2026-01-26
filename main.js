@@ -185,9 +185,28 @@ form.addEventListener('submit', async (e) => {
         statusEl.textContent = '❌ Error sending message.';
     }
 });
+    const animateCounter = (el) => {
+    const target = Number(el.getAttribute('data-count')) || 0;
+    const duration = 1200;
+    const start = performance.now();
+    
+    // Check for attributes once at the start
+    const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
+
+    const step = (now) => {
+        const progress = Math.min(1, (now - start) / duration);
+        // Ease-out cubic for a smooth "Apple-style" finish
+        const value = Math.round(target * (1 - Math.pow(1 - progress, 3)));
+        
+        // Update textContent with the number AND the symbol
+        el.textContent = value + symbol;
+        
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    };
+    requestAnimationFrame(step);
+};
   }
 })();
-// Update this line inside your animateCounter function:
-const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
-el.textContent = String(v) + symbol;
 
