@@ -110,7 +110,39 @@
       els.status.className = 'form-status ' + (type === 'success' ? 'is-success' : 'is-error');
       els.status.textContent = msg;
     }
+function validateForm(els) {
+    let ok = true;
+    
+    // Helper to clear existing errors
+    const clearError = (input, hint) => {
+        input.classList.remove('input-error');
+        hint.textContent = '';
+        hint.classList.remove('error');
+    };
 
+    // Name Check
+    if (!els.name.value.trim()) {
+        els.name.classList.add('input-error');
+        els.hints.name.textContent = 'Name is required.';
+        els.hints.name.classList.add('error');
+        ok = false;
+    } else {
+        clearError(els.name, els.hints.name);
+    }
+
+    // Email Check
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailPattern.test(els.email.value.trim())) {
+        els.email.classList.add('input-error');
+        els.hints.email.textContent = 'Please enter a valid email.';
+        els.hints.email.classList.add('error');
+        ok = false;
+    } else {
+        clearError(els.email, els.hints.email);
+    }
+
+    return ok;
+}
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
