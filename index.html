@@ -290,6 +290,10 @@ system design.Modernization: Led migration of legacy JSP applications to Java 21
               <textarea id="cfMessage" name="message" required placeholder="Describe your project or inquiry..."></textarea>
               <div id="cfMessageHint" class="field-hint"></div>
             </div>
+            <div style="display:none;">
+              <label>Keep this field blank</label>
+              <input type="text" name="_gotcha">
+            </div>
           </div>
           <div class="form-actions">
             <button type="submit" id="cfSubmit" class="btn primary">Send Message</button>
