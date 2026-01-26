@@ -111,36 +111,6 @@
       els.status.textContent = msg;
     }
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let ok = true;
-      
-      // Validate
-      setFieldState(els.name, els.hints.name, els.name.value.trim() ? '' : 'Name is required.');
-      setFieldState(els.email, els.hints.email, emailOk(els.email.value) ? '' : 'Valid email is required.');
-      setFieldState(els.subject, els.hints.subject, els.subject.value.trim() ? '' : 'Subject is required.');
-      setFieldState(els.message, els.hints.message, els.message.value.trim() ? '' : 'Message is required.');
-
-      const firstError = form.querySelector('.input-error');
-      if (firstError) {
-        firstError.focus();
-        setStatus('error', 'Please correct the errors above.');
-        return;
-      }
-
-      // Handle Submit
-      const to = 'jugal.k.mahendra@gmail.com';
-      const body = `Name: ${els.name.value}\nEmail: ${els.email.value}\n\n${els.message.value}`;
-      const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(els.subject.value)}&body=${encodeURIComponent(body)}`;
-      
-      setStatus('success', 'Opening your email client...');
-      window.location.href = mailto;
-    });
-  }
-})();
-// Update this line inside your animateCounter function:
-const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
-el.textContent = String(v) + symbol;
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -177,3 +147,9 @@ form.addEventListener('submit', async (e) => {
       setStatus('error', '❌ Connection error. Please try LinkedIn instead.');
     }
   });
+  }
+})();
+// Update this line inside your animateCounter function:
+const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
+el.textContent = String(v) + symbol;
+
