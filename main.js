@@ -138,3 +138,6 @@
     });
   }
 })();
+// Update this line inside your animateCounter function:
+const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
+el.textContent = String(v) + symbol;
