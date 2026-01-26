@@ -39,12 +39,12 @@
           <p class="subtitle">Building scalable enterprise platforms with <span class="accent">Java 21</span>, <span class="accent">Spring Boot</span>, and <span class="accent">Generative AI</span>.</p>
           <div class="cta-row">
             <a class="btn primary" href="#contact">Let’s Talk</a>
-            <a class="btn" href="https://www.linkedin.com/in/jugal-mahendra" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="https://www.linkedin.com/in/jugal-mahendra" target="_blank" rel="noreferrer">Message on LinkedIn</a>
           </div>
           <div class="stats" aria-label="Key stats">
             <div class="stat"><div class="stat-num" data-count="17">0</div><div class="stat-label">Years Experience</div></div>
-            <div class="stat"><div class="stat-num" data-count="70">0</div><div class="stat-label">Performance Boost</div></div>
-            <div class="stat"><div class="stat-num" data-count="30">0</div><div class="stat-label">Faster Recovery</div></div>
+            <div class="stat"><div class="stat-num" data-count="70%">0</div><div class="stat-label">Performance Boost</div></div>
+            <div class="stat"><div class="stat-num" data-count="30%">0</div><div class="stat-label">Faster Recovery</div></div>
           </div>
         </div>
         <div class="hero-card">
@@ -259,63 +259,62 @@ system design.Modernization: Led migration of legacy JSP applications to Java 21
       </div>
     </section>
 
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="lead">Want to collaborate or discuss opportunities? Reach out.</p>
 
-        <div class="grid cards contact-cards">
-          <a class="card contact-card" href="mailto:jugal.k.mahendra@gmail.com">
-            <h3>Email</h3><p>jugal.k.mahendra@gmail.com</p>
-          </a>
-          <a class="card contact-card" href="tel:+14302578118">
-            <h3>Phone</h3><p>(430) 257-8118</p>
-          </a>
-          <a class="card contact-card" href="https://www.linkedin.com/in/jugal-mahendra" target="_blank" rel="noreferrer">
-            <h3>LinkedIn</h3><p>linkedin.com/in/jugal-mahendra</p>
-          </a>
-        </div>
 
-        <!-- Contact Form (no-backend default: mailto fallback; optional Netlify/Formspree supported) -->
-        <div class="contact-form-wrap card">
-          <h3>Send a message</h3>
-          <p class="muted">This form works without a backend using your email app. For production, you can enable Netlify Forms or Formspree (instructions in README).</p>
+  <section id="contact" class="section">
+  <div class="container">
+    <h2>Let's Connect</h2>
+    <p class="lead">Available for architectural consulting, AI innovation, and professional networking.</p>
 
-          <form id="contactForm" class="contact-form" method="POST" novalidate>
-            <div class="form-grid">
-              <div class="field">
-                <label for="cfName">Name <span aria-hidden="true">*</span></label>
-                <input id="cfName" name="name" type="text" autocomplete="name" required />
-                <div class="field-hint" id="cfNameHint" role="alert" aria-live="polite"></div>
-              </div>
-              <div class="field">
-                <label for="cfEmail">Email <span aria-hidden="true">*</span></label>
-                <input id="cfEmail" name="email" type="email" autocomplete="email" required inputmode="email" />
-                <div class="field-hint" id="cfEmailHint" role="alert" aria-live="polite"></div>
-              </div>
-              <div class="field form-span-2">
-                <label for="cfSubject">Subject <span aria-hidden="true">*</span></label>
-                <input id="cfSubject" name="subject" type="text" required />
-                <div class="field-hint" id="cfSubjectHint" role="alert" aria-live="polite"></div>
-              </div>
-              <div class="field form-span-2">
-                <label for="cfMessage">Message <span aria-hidden="true">*</span></label>
-                <textarea id="cfMessage" name="message" rows="6" required></textarea>
-                <div class="field-hint" id="cfMessageHint" role="alert" aria-live="polite"></div>
-              </div>
+    <div class="contact-grid">
+      <div class="contact-form-wrap">
+        <form id="contactForm" action="https://formspree.io/f/mgokzbee" method="POST" class="contact-form">
+          <div class="form-grid">
+            <div class="field">
+              <label for="cfName">Name</label>
+              <input type="text" id="cfName" name="name" required placeholder="Your Name">
+              <div id="cfNameHint" class="field-hint"></div>
             </div>
-
-            <div class="form-actions">
-              <button class="btn primary" type="submit" id="cfSubmit">Send Message</button>
-              <button class="btn" type="reset">Clear</button>
+            <div class="field">
+              <label for="cfEmail">Email</label>
+              <input type="email" id="cfEmail" name="email" required placeholder="your@email.com">
+              <div id="cfEmailHint" class="field-hint"></div>
             </div>
-
-            <div class="form-status" id="cfStatus" role="status" aria-live="polite"></div>
-          </form>
-        </div>
+            <div class="field form-span-2">
+              <label for="cfSubject">Subject</label>
+              <input type="text" id="cfSubject" name="subject" required placeholder="How can I help?">
+              <div id="cfSubjectHint" class="field-hint"></div>
+            </div>
+            <div class="field form-span-2">
+              <label for="cfMessage">Message</label>
+              <textarea id="cfMessage" name="message" required placeholder="Describe your project or inquiry..."></textarea>
+              <div id="cfMessageHint" class="field-hint"></div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="cfSubmit" class="btn primary">Send Message</button>
+            <div id="cfStatus" class="form-status"></div>
+          </div>
+        </form>
       </div>
-    </section>
-  </main>
+
+      <div class="contact-methods">
+        <article class="card contact-method">
+          <h3>Professional Network</h3>
+          <p>For the fastest response, message me directly on LinkedIn.</p>
+          <a href="https://www.linkedin.com/in/jugal-mahendra/" target="_blank" class="btn-outline">
+            Open LinkedIn Messenger
+          </a>
+        </article>
+        
+        <article class="card contact-method">
+          <h3>Current Location</h3>
+          <p>Based in <strong>Austin/Leander, TX</strong>.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
 
   <footer class="site-footer">
     <div class="container">

@@ -141,3 +141,39 @@
 // Update this line inside your animateCounter function:
 const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
 el.textContent = String(v) + symbol;
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Clear previous status
+    setStatus('', '');
+    
+    // Validate fields before sending
+    if (!validate()) {
+      setStatus('error', 'Please correct the errors in the form.');
+      return;
+    }
+
+    setStatus('info', 'Sending your message...');
+
+    // Use Fetch API to send data to Formspree
+    try {
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus('success', '✅ Success! Your message has been sent.');
+        form.reset(); // Clear the form
+      } else {
+        const errorData = await response.json();
+        setStatus('error', '❌ Oops! ' + (errorData.error || 'There was a problem.'));
+      }
+    } catch (error) {
+      setStatus('error', '❌ Connection error. Please try LinkedIn instead.');
+    }
+  });
