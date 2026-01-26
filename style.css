@@ -200,6 +200,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--glass) !important;
   border: 1px solid var(--stroke) !important;
   backdrop-filter: blur(5px);
+}
 
 /* --- Buttons --- */
 .cta-row {
