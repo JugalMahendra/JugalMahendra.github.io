@@ -173,3 +173,83 @@ a { color: inherit; text-decoration: none; }
   .grid.cards { grid-template-columns: 1fr; }
   .hero-card { padding: 20px; }
 }
+
+/* --- Buttons --- */
+.cta-row {
+  display: flex;
+  gap: 12px;
+  margin: 24px 0;
+  justify-content: flex-start;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn.primary {
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  border: none;
+}
+
+.btn.secondary {
+  background-color: var(--glass);
+  color: var(--text);
+  border: 1px solid var(--stroke);
+  backdrop-filter: blur(5px);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 113, 227, 0.3);
+}
+
+/* --- Stats --- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.stat {
+  padding: 20px;
+  background: var(--glass);
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+.stat:hover {
+  border-color: var(--brand-blue);
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+/* Adding symbols via CSS based on attributes */
+[data-plus]::after { content: '+'; font-size: 1.2rem; color: var(--accent2); }
+[data-percent]::after { content: '%'; font-size: 1.2rem; color: var(--accent2); }
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .stats { grid-template-columns: 1fr; }
+}
