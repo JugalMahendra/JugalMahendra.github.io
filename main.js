@@ -144,41 +144,47 @@ function validateForm(els) {
     return ok;
 }
 form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    // Clear previous status
-    setStatus('', '');
-    
-    // Validate fields before sending
-    if (!validate()) {
-      setStatus('error', 'Please correct the errors in the form.');
-      return;
-    }
+    e.preventDefault(); 
 
-    setStatus('info', 'Sending your message...');
-
-    // Use Fetch API to send data to Formspree
-    try {
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+    // Gather elements
+    const els = {
+        name: document.getElementById('cfName'),
+        email: document.getElementById('cfEmail'),
+        hints: {
+            name: document.getElementById('cfNameHint'),
+            email: document.getElementById('cfEmailHint')
         }
-      });
+    };
 
-      if (response.ok) {
-        setStatus('success', '✅ Success! Your message has been sent.');
-        form.reset(); // Clear the form
-      } else {
-        const errorData = await response.json();
-        setStatus('error', '❌ Oops! ' + (errorData.error || 'There was a problem.'));
-      }
-    } catch (error) {
-      setStatus('error', '❌ Connection error. Please try LinkedIn instead.');
+    // Now 'validateForm' is defined and can be found
+    if (!validateForm(els)) {
+        return; 
     }
-  });
+
+    // Proceed with Fetch/Formspree...
+    const statusEl = document.getElementById('cfStatus');
+    statusEl.textContent = 'Sending...';
+    statusEl.style.display = 'block';
+
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+            statusEl.className = 'form-status is-success';
+            statusEl.textContent = '✅ Message sent!';
+            form.reset();
+        } else {
+            throw new Error();
+        }
+    } catch (err) {
+        statusEl.className = 'form-status is-error';
+        statusEl.textContent = '❌ Error sending message.';
+    }
+});
   }
 })();
 // Update this line inside your animateCounter function:
