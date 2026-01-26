@@ -24,6 +24,9 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
+  <span id="theme-icon">🌙</span>
+</button>
     </nav>
   </header>
 
@@ -44,14 +47,32 @@
             <div class="stat"><div class="stat-num" data-count="30">0</div><div class="stat-label">Faster Recovery</div></div>
           </div>
         </div>
-        <div class="hero-card" aria-hidden="true">
-          <div class="avatar"></div>
-          <div class="hero-card-lines">
-            <div class="line w70"></div>
-            <div class="line w55"></div>
-            <div class="line w80"></div>
-          </div>
-        </div>
+        <div class="hero-card">
+  <div class="avatar">
+    <img src="your-photo.jpg" alt="Jugal Mahendra" class="avatar-img">
+  </div>
+  
+  <div class="hero-card-lines">
+    <div class="hero-line title">Jugal Mahendra</div>
+    
+    <div class="hero-line highlight">
+      <strong>Technology Lead</strong> with 17+ years of experience delivering enterprise solutions for <strong>Apple</strong>[cite: 4, 14, 16].
+    </div>
+    
+    <div class="hero-line subtext">
+      Expert in <strong>Java 21</strong> performance [cite: 5, 22]; currently future-proofing architecture with <strong>Agentic AI</strong>[cite: 7].
+    </div>
+
+    <div class="hero-actions">
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="btn-linkedin">
+        Connect on LinkedIn
+      </a>
+      <a href="#projects" class="btn-outline">
+        View Projects
+      </a>
+    </div>
+  </div>
+</div>
       </div>
     </section>
 
@@ -63,18 +84,80 @@
     </section>
 
     <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="grid cards">
-          <article class="card"><h3>Programming</h3><p>Java 21, Spring Boot, Python, Shell</p></article>
-          <article class="card"><h3>AI / ML</h3><p>LangChain, Transformers, Hugging Face, TensorFlow</p></article>
-          <article class="card"><h3>Data</h3><p>Pandas, NumPy, Kafka</p></article>
-          <article class="card"><h3>DevOps</h3><p>Docker, Ansible, Jenkins, Git</p></article>
-          <article class="card"><h3>Infra</h3><p>MongoDB, Redis, Apache</p></article>
-          <article class="card"><h3>Monitoring</h3><p>Splunk, Grafana, RCA</p></article>
+  <div class="container">
+    <h2>Technical Expertise</h2>
+    <div class="grid cards">
+      
+      <article class="card">
+        <h3>Backend & Architecture</h3>
+        <div class="skill-pills">
+          <span class="pill">Java 21</span>
+          <span class="pill">Spring Boot</span>
+          <span class="pill">Microservices</span>
+          <span class="pill">Distributed Systems</span>
+          <span class="pill">Asynchronous Programming</span>
         </div>
-      </div>
-    </section>
+      </article>
+
+      <article class="card">
+        <h3>Generative AI & ML</h3>
+        <div class="skill-pills">
+          <span class="pill">LangChain</span>
+          <span class="pill">LLMs</span>
+          <span class="pill">Transformers</span>
+          <span class="pill">Hugging Face</span>
+          <span class="pill">TensorFlow</span>
+          <span class="pill">RAG</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Data & Messaging</h3>
+        <div class="skill-pills">
+          <span class="pill">Redis</span>
+          <span class="pill">Kafka</span>
+          <span class="pill">MongoDB</span>
+          <span class="pill">Pandas</span>
+          <span class="pill">NumPy</span>
+          <span class="pill">SQL</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>DevOps & Infrastructure</h3>
+        <div class="skill-pills">
+          <span class="pill">Docker</span>
+          <span class="pill">Ansible</span>
+          <span class="pill">Jenkins</span>
+          <span class="pill">CI/CD Pipelines</span>
+          <span class="pill">Apache</span>
+          <span class="pill">Git</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Monitoring & Quality</h3>
+        <div class="skill-pills">
+          <span class="pill">Splunk</span>
+          <span class="pill">Grafana</span>
+          <span class="pill">Root Cause Analysis (RCA)</span>
+          <span class="pill">Unit Testing</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3>Leadership & Agile</h3>
+        <div class="skill-pills">
+          <span class="pill">Scrum Master</span>
+          <span class="pill">Requirement Scoping</span>
+          <span class="pill">Offshore Coordination</span>
+          <span class="pill">Mentorship</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
     <section id="experience" class="section">
       <div class="container">
@@ -120,15 +203,59 @@ system design.Modernization: Led migration of legacy JSP applications to Java 21
       </div>
     </section>
 
-    <section id="projects" class="section">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="grid cards">
-          <article class="card"><h3>Enterprise Knowledge Assistant</h3><p>RAG system with LangChain + Python to query technical documentation.</p></article>
-          <article class="card"><h3>Predictive Performance Monitor</h3><p>ANN + Pandas to analyze performance metrics for incident mitigation.</p></article>
+<section id="projects" class="section">
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="grid cards">
+      
+      <article class="card">
+        <h3>Apple Support: Parallel Pricing Engine</h3>
+        <p class="description">Engineered a low-latency pricing system for <strong>support.apple.com</strong> to guide users on product repairs and pricing. [cite: 14, 22]</p>
+        
+        <div class="tech-stack">
+          <span>Java 21</span> <span>CompletableFuture</span> <span>Redis</span> <span>Spring Boot</span> [cite: 10, 22]
         </div>
-      </div>
-    </section>
+        
+        <ul class="highlights">
+          <li>Optimized performance by 70% using <strong>Parallel Processing</strong> for concurrent data aggregation. [cite: 5, 22]</li>
+          <li>Implemented <strong>Redis caching</strong> to manage high-traffic global requests with minimal latency. [cite: 10, 22]</li>
+          <li>Delivered critical features within the <strong>Apple ecosystem</strong> with a 98% on-schedule rate. [cite: 14, 18]</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Enterprise Knowledge Assistant</h3>
+        <p class="description">A <strong>RAG-based</strong> system designed to bridge enterprise documentation with Generative AI. [cite: 7, 10]</p>
+        
+        <div class="tech-stack">
+          <span>Python</span> <span>LangChain</span> <span>Hugging Face</span> <span>Vector DB</span> [cite: 10]
+        </div>
+        
+        <ul class="highlights">
+          <li>Leveraged <strong>LangChain</strong> to implement autonomous document retrieval for technical specs. [cite: 10]</li>
+          <li>Utilized <strong>Transformers</strong> to enhance semantic search accuracy across legacy architectures. [cite: 10]</li>
+          <li>Focused on <strong>Future-Proofing</strong> enterprise systems through modern AI evaluation. [cite: 8]</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Predictive Performance Monitor</h3>
+        <p class="description">Proactive monitoring tool using <strong>Machine Learning</strong> to predict system bottlenecks. [cite: 10, 25]</p>
+        
+        <div class="tech-stack">
+          <span>ANN/RNN</span> <span>Pandas</span> <span>NumPy</span> <span>TensorFlow</span> [cite: 10]
+        </div>
+        
+        <ul class="highlights">
+          <li>Applied <strong>Neural Network design</strong> to analyze historical system performance metrics. [cite: 10, 34]</li>
+          <li>Reduced incident resolution time by 30% through predictive <strong>Root Cause Analysis</strong>. [cite: 6, 25]</li>
+          <li>Integrated with <strong>Splunk and Grafana</strong> for real-time observability and alerting. [cite: 10, 25]</li>
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
 
     <section id="education" class="section">
       <div class="container">
