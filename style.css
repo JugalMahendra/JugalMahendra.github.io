@@ -337,74 +337,77 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 600px) {
-.nav {
-    flex-direction: column; /* Stacks logo and menu */
-    padding: 15px 0;
-    gap: 15px;
+  /* 1. HIDE THE WHITE DOT (Theme Toggle Checkbox) */
+  #theme-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+  }
+
+  /* 2. HEADER & NAVIGATION: Stacked and Centered */
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
   }
 
   .nav-menu {
-    flex-wrap: wrap; /* Allows links to wrap to a second line */
+    flex-direction: row; /* Keep links in a row but allow wrapping */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
   }
 
   .nav-menu a {
-    font-size: 0.85rem;
-    padding: 5px;
+    font-size: 0.9rem;
+    padding: 8px;
   }
-  /* Hero Typography */
-  h1 {
-    font-size: 2rem !important;
+
+  /* 3. HERO SECTION: Centered for Mobile */
+  .hero {
+    padding: 40px 0;
     text-align: center;
   }
 
-  /* Stats Stacking */
-  .stats {
-    grid-template-columns: 1fr !important; /* Forces single column */
-    width: 100%;
-    gap: 15px;
+  h1 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    margin-bottom: 16px;
   }
 
-  .stat {
-    width: 100%;
-    padding: 15px;
-  }
-
-  /* Center the CTA buttons */
   .cta-row {
     flex-direction: column;
     width: 100%;
     gap: 12px;
+    margin: 24px 0;
   }
 
   .btn {
     width: 100% !important;
     justify-content: center;
   }
-  .hero {
-    padding: 40px 0; /* Less top padding on mobile */
-    text-align: center;
-  }
 
-  h1 {
-    font-size: 2.2rem; /* Scale down the large heading */
-    line-height: 1.1;
-  }
-
-  .cta-row {
-    flex-direction: column; /* Stack buttons vertically */
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%; /* Full width buttons for easier tapping */
-    justify-content: center;
-  }
-
+  /* 4. STATS: Single Column Stacking */
   .stats {
-    grid-template-columns: 1fr; /* Stack stats in a single column */
+    grid-template-columns: 1fr !important;
+    width: 100%;
     gap: 12px;
+    margin-top: 30px;
+  }
+
+  .stat {
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* 5. EXPERIENCE & CARDS: Full Width */
+  .timeline-item.card,
+  .contact-form-wrap.card {
+    padding: 24px;
+    margin-bottom: 24px;
   }
 }
