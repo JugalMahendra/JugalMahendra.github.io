@@ -278,9 +278,6 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.05em;
 }
 
-@media (max-width: 600px) {
-  .stats { grid-template-columns: 1fr; }
-}
 
 #contact .contact-grid {
     display: block; /* Overrides the grid to allow full width */
@@ -319,4 +316,50 @@ a { color: inherit; text-decoration: none; }
   border-left: 2px solid var(--stroke);
   padding-left: 20px;
   margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column; /* Stack Brand and Menu */
+    gap: 12px;
+  }
+  
+  .nav-menu {
+    gap: 12px;
+    font-size: 0.85rem; /* Shrink links slightly */
+    flex-wrap: wrap; /* Allow links to wrap to a second line if needed */
+    justify-content: center;
+  }
+  
+  .brand {
+    padding: 4px 8px; /* Compact brand logo */
+  }
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 40px 0; /* Less top padding on mobile */
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2.2rem; /* Scale down the large heading */
+    line-height: 1.1;
+  }
+
+  .cta-row {
+    flex-direction: column; /* Stack buttons vertically */
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%; /* Full width buttons for easier tapping */
+    justify-content: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr; /* Stack stats in a single column */
+    gap: 12px;
+  }
 }
