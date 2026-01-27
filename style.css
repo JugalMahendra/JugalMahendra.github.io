@@ -337,7 +337,52 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 600px) {
+.nav {
+    flex-direction: column; /* Stacks logo and menu */
+    padding: 15px 0;
+    gap: 15px;
+  }
 
+  .nav-menu {
+    flex-wrap: wrap; /* Allows links to wrap to a second line */
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .nav-menu a {
+    font-size: 0.85rem;
+    padding: 5px;
+  }
+  /* Hero Typography */
+  h1 {
+    font-size: 2rem !important;
+    text-align: center;
+  }
+
+  /* Stats Stacking */
+  .stats {
+    grid-template-columns: 1fr !important; /* Forces single column */
+    width: 100%;
+    gap: 15px;
+  }
+
+  .stat {
+    width: 100%;
+    padding: 15px;
+  }
+
+  /* Center the CTA buttons */
+  .cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100% !important;
+    justify-content: center;
+  }
   .hero {
     padding: 40px 0; /* Less top padding on mobile */
     text-align: center;
