@@ -292,3 +292,14 @@ a { color: inherit; text-decoration: none; }
     max-width: 100%; /* Ensures it fills the container */
     box-sizing: border-box; /* Keeps padding from pushing the box out */
 }
+/* target the highlights list specifically */
+.container li {
+  margin-bottom: 12px;    /* Adds space between bullets */
+  line-height: 1.6;       /* Increases space between lines of text */
+  padding-left: 8px;      /* Gives the text a little room from the dot */
+}
+
+/* Ensure the last bullet doesn't have extra bottom margin */
+.container li:last-child {
+  margin-bottom: 0;
+}
