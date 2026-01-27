@@ -313,11 +313,3 @@ a { color: inherit; text-decoration: none; }
 .timeline-item.card:last-child {
   margin-bottom: 0;
 }
-
-/* Optional: Add a vertical line for the "Timeline" look */
-.timeline {
-  position: relative;
-  border-left: 2px solid var(--stroke);
-  padding-left: 20px;
-  margin-left: 10px;
-}
