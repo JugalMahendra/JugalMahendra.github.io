@@ -191,7 +191,7 @@ form.addEventListener('submit', async (e) => {
     const start = performance.now();
     
     // Check for attributes once at the start
-    const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
+    //const symbol = el.hasAttribute('data-plus') ? '+' : el.hasAttribute('data-percent') ? '%' : '';
 
     const step = (now) => {
         const progress = Math.min(1, (now - start) / duration);
@@ -199,7 +199,8 @@ form.addEventListener('submit', async (e) => {
         const value = Math.round(target * (1 - Math.pow(1 - progress, 3)));
         
         // Update textContent with the number AND the symbol
-        el.textContent = value + symbol;
+        //el.textContent = value + symbol;
+       el.textContent = value;
         
         if (progress < 1) {
             requestAnimationFrame(step);
