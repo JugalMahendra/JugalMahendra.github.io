@@ -61,7 +61,7 @@
       const p = Math.min(1, (t - start) / duration);
       // Ease out cubic function
       const v = Math.round(from + (target - from) * (1 - Math.pow(1 - p, 3)));
-      el.textContent = String(v) + (el.hasAttribute('data-plus') ? '+' : '');
+      el.textContent = String(v);
       if (p < 1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
