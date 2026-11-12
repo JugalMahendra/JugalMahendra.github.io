@@ -1,374 +1,343 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jugal Mahendra | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugal Mahendra | Technology Lead & Senior Java Backend Specialist</title>
+    <meta name="description" content="Portfolio of Jugal Mahendra - Technology Lead, Senior Java Backend Specialist, and GenAI Engineer building scalable enterprise platforms.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' },
+                        darkBg: '#0f172a',
+                        cardBg: '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
+    </style>
 </head>
-<body>
-  <header class="site-header">
-    <nav class="nav">
-      <a class="brand" href="#home" aria-label="Go to top">JM</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
-        <span></span><span></span><span></span>
-      </button>
-      <div id="navMenu" class="nav-menu">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode">
-  <span id="theme-icon">🌙</span>
-</button>
-    </nav>
-  </header>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-green-500 selection:text-slate-950">
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container">
-      <div class="hero-inner">
-        <div class="hero-copy">
-          <p class="pill">Gen AI & ML Innovator • Technology Lead</p>
-          <h1>Jugal Mahendra</h1>
-          <p class="subtitle">Building scalable enterprise platforms with <span class="accent">Java 21</span>, <span class="accent">Spring Boot</span>, and <span class="accent">Generative AI</span>.</p>
-          <div class="cta-row">
-  <a class="btn primary" href="#contact">Let’s Talk</a>
-  <a class="btn secondary" href="https://www.linkedin.com/in/jugal-mahendra" target="_blank" rel="noreferrer">
-    Message on LinkedIn
-  </a>
-</div>
-         <div class="stats" aria-label="Key stats">
-  <div class="stat">
-    <div class="stat-num" data-count="17" data-plus>0</div>
-    <div class="stat-label">Years Experience</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num" data-count="70" data-percent>0</div>
-    <div class="stat-label">Performance Boost</div>
-  </div>
-  <div class="stat">
-    <div class="stat-num" data-count="30" data-percent>0</div>
-    <div class="stat-label">Faster Recovery</div>
-  </div>
-</div>
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="text-green-500">&lt;</span>Jugal Mahendra<span class="text-green-500">/&gt;</span>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#about" class="hover:text-green-400 transition">About</a>
+                <a href="#expertise" class="hover:text-green-400 transition">Expertise</a>
+                <a href="#experience" class="hover:text-green-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-green-400 transition">Projects</a>
+                <a href="#contact" class="hover:text-green-400 transition">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://linkedin.com/in/jugalmahendra" target="_blank" class="text-slate-400 hover:text-green-400 transition text-lg"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/JugalMahendra" target="_blank" class="text-slate-400 hover:text-green-400 transition text-lg"><i class="fab fa-github"></i></a>
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-white text-sm font-semibold transition shadow-lg shadow-green-900/30">Get in Touch</a>
+            </div>
         </div>
-        <div class="hero-card">
-  <div class="avatar">
-    <img src="1736521460396.jpeg" alt="Jugal Mahendra" class="avatar-img">
-  </div>
-  
-  <div class="hero-card-lines">
-    <div class="hero-line title">Jugal Mahendra</div>
-    
-    <div class="hero-line highlight">
-      <strong>Technology Lead</strong> with 17+ years of experience delivering enterprise solutions for <strong>Apple</strong>.
-    </div>
-    
-    <div class="hero-line subtext">
-      Expert in <strong>Java 21</strong> performance; currently future-proofing architecture with <strong>Agentic AI</strong>.
-    </div>
-  </div>
-</div>
-      </div>
-      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-900/50 to-slate-950">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),rgba(255,255,255,0))]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Available for Technology Lead & Senior Roles (Austin, TX)
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
+                    Jugal Mahendra
+                </h1>
+                <p class="text-xl sm:text-2xl font-semibold text-green-400 mb-6">
+                    Technology Lead | Senior Java Backend Specialist | GenAI Engineer
+                </p>
+                <p class="text-lg text-slate-300 leading-relaxed mb-10">
+                    Building scalable enterprise platforms through Java, Spring Boot, microservices, cloud modernization, and Generative AI. 17+ years of engineering excellence solving complex backend challenges.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects" class="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-semibold transition shadow-lg shadow-green-900/40 flex items-center gap-2">
+                        View Projects <i class="fas fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+
+            <!-- Statistics Grid (Fixed counters) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-12 border-t border-slate-800/80">
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">17+</div>
+                    <div class="text-sm font-medium text-slate-400">Years Experience</div>
+                </div>
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">9+</div>
+                    <div class="text-sm font-medium text-slate-400">Years Supporting Apple</div>
+                </div>
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">Java 21</div>
+                    <div class="text-sm font-medium text-slate-400">Core Tech Stack</div>
+                </div>
+                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
+                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">RAG & AI</div>
+                    <div class="text-sm font-medium text-slate-400">Agentic Architecture</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p class="lead">Innovative Technology Lead with 17+ years delivering high-impact enterprise solutions for Apple and HP. Passionate about modernization, system performance, and GenAI-driven productivity.</p>
-      </div>
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-3xl">
+                <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                    <span class="text-green-500">01.</span> About Me
+                </h2>
+                <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
+                    <p>
+                        I am a Technology Lead and Backend Software Architect with over 17 years of extensive enterprise engineering experience. Throughout my career—including over 9 years supporting Apple teams via Infosys—I have specialized in architecting high-performance Java enterprise systems, Spring Boot microservices, robust cloud deployments, and advanced AI integrations.
+                    </p>
+                    <p>
+                        My core differentiator lies in combining deep, battle-tested enterprise backend delivery with modern Generative AI engineering (RAG pipelines, LangChain, MCP servers, and multi-agent workflows). Whether modernizing legacy JSP applications to Java 21 or building intelligent automation solutions, I focus on clean architecture, scalability, and measurable business impact.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills" class="section">
-  <div class="container">
-    <h2>Technical Expertise</h2>
-    <div class="grid cards verticalline">
-      
-      <article class="card">
-        <h3>Backend & Architecture</h3>
-        <div class="skill-pills">
-          <span class="pill">Java 21</span>
-          <span class="pill">Spring Boot</span>
-          <span class="pill">Microservices</span>
-          <span class="pill">Distributed Systems</span>
-          <span class="pill">Asynchronous Programming</span>
+    <!-- Technical Expertise -->
+    <section id="expertise" class="py-24 bg-slate-900/40 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="text-green-500">02.</span> Technical Expertise
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-green-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 text-xl mb-6">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Enterprise Java & Backend</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li>• Java 21 / Java EE</li>
+                        <li>• Spring Boot & Spring Framework</li>
+                        <li>• Microservices Architecture</li>
+                        <li>• REST APIs, Redis, CompletableFuture</li>
+                        <li>• Enterprise Performance Tuning</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-green-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 text-xl mb-6">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Cloud & DevOps</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li>• Cloud Deployments & Infrastructure</li>
+                        <li>• CI/CD Pipeline Automation</li>
+                        <li>• Legacy JSP to Java 21 Modernization</li>
+                        <li>• Scalable Containerized Workflows</li>
+                        <li>• Reliability & System Monitoring</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-green-500/50 transition">
+                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 text-xl mb-6">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">GenAI & AI Agents</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li>• Python & LangChain Integration</li>
+                        <li>• Model Context Protocol (MCP) Servers</li>
+                        <li>• Enterprise RAG & Vector Databases</li>
+                        <li>• Multi-Agent Orchestration</li>
+                        <li>• Practical AI System Implementations</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </article>
-
-      <article class="card">
-        <h3>Generative AI & ML</h3>
-        <div class="skill-pills">
-          <span class="pill">LangChain</span>
-          <span class="pill">LLMs</span>
-          <span class="pill">Transformers</span>
-          <span class="pill">Hugging Face</span>
-          <span class="pill">TensorFlow</span>
-          <span class="pill">RAG</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>Data & Messaging</h3>
-        <div class="skill-pills">
-          <span class="pill">Redis</span>
-          <span class="pill">Kafka</span>
-          <span class="pill">MongoDB</span>
-          <span class="pill">Pandas</span>
-          <span class="pill">NumPy</span>
-          <span class="pill">SQL</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>DevOps & Infrastructure</h3>
-        <div class="skill-pills">
-          <span class="pill">Docker</span>
-          <span class="pill">Ansible</span>
-          <span class="pill">Jenkins</span>
-          <span class="pill">CI/CD Pipelines</span>
-          <span class="pill">Apache</span>
-          <span class="pill">Git</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>Monitoring & Quality</h3>
-        <div class="skill-pills">
-          <span class="pill">Splunk</span>
-          <span class="pill">Grafana</span>
-          <span class="pill">Root Cause Analysis (RCA)</span>
-          <span class="pill">Unit Testing</span>
-        </div>
-      </article>
-
-      <article class="card">
-        <h3>Leadership & Agile</h3>
-        <div class="skill-pills">
-          <span class="pill">Scrum Master</span>
-          <span class="pill">Requirement Scoping</span>
-          <span class="pill">Offshore Coordination</span>
-          <span class="pill">Mentorship</span>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-    <section id="experience" class="section">
-      <div class="container">
-        <h2>Experience</h2>
-        <div class="grid timeline verticalline">
-          <div class="timeline-item card">
-<h3>Technology Lead, IT-SCIENT (Apple)</h3>
-  <p class="muted">Oct 2021 – Present • Austin, TX</p>
-  <ul>
-    <li><strong>High-Scale Feature Development:</strong> Engineered key features for support.apple.com, specifically the iPhone repair pricing system, utilizing Parallel Processing and Redis cache.</li>
-<li><strong>Modernization:</strong> Led migration of legacy JSP applications to Java 21 and Spring, boosting performance by 70%.</li>
-<li><strong>Strategic Delivery:</strong> Conducted Requirement Scoping to maintain a 98% on-schedule delivery rate across 5+ complex projects.</li>
-<li><strong>Team Leadership:</strong> Directed a 3-person team, reducing delivery time by 15%.</li>
-<li><strong>Operational Excellence:</strong> Reduced incident resolution time by 30% via Root Cause Analysis.</li>
-<li><strong>AI Integration:</strong> Leveraging Python and Generative AI skills to identify future-proofing opportunities in system design.</li>
-  </ul>
-          </div>
-          <div class="timeline-item card">
-            <h3>Technology Lead/Analyst, Infosys (Apple)</h3>
-            <p class="muted">Jul 2012 – Oct 2021 • Austin / Santa Clara / Hyderabad</p>
-            <ul>
-              <li><strong>Global Team Leadership:</strong> Spearheaded a team of 6 software developers across international hubs, managing the end-to-end project lifecycle and Offshore project coordination</li>
-<li><strong>Compliance & Design:</strong> Enforced secure API design and data validation to meet strict compliance and security requirements.</li>
-<li><strong>Documentation:</strong> Developed comprehensive technical documentation, including architecture diagrams, HLD/LLD, and design specifications.</li>
-<li><strong>Incident Mitigation:</strong> Quickly diagnosed complex issues through Root Cause Analysis and codebase debugging to prevent future bottlenecks.</li>
-<li><strong>Stakeholder Alignment:</strong> Created trust with customers and partners by translating business objectives into compelling solutions.</li>
-            </ul>
-          </div>
-          <div class="timeline-item card">
-            <h3>Software Engineer, Value Labs (HP)</h3>
-            <p class="muted">Oct 2010 – Jun 2012 • Hyderabad, India</p>
-            <ul>
-              <li>Release delivery and post-release warranty support.</li>
-              <li>Integrated enterprise systems via API development.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </section>
 
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="grid cards verticalline">
-      
-      <article class="card">
-        <h3>Apple Support: Parallel Pricing Engine</h3>
-        <p class="description">Engineered a low-latency pricing system for <strong>support.apple.com</strong> to guide users on product repairs and pricing.</p>
-        
-        <div class="tech-stack">
-          <span>Java 21</span> <span>CompletableFuture</span> <span>Redis</span> <span>Spring Boot</span> 
+    <!-- Experience Section -->
+    <section id="experience" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="text-green-500">03.</span> Professional Experience
+            </h2>
+            <div class="space-y-12 max-w-4xl">
+                <!-- Apple / IT-SCIENT Roles -->
+                <div class="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 relative">
+                    <div class="absolute -left-3 top-8 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-slate-950 font-bold text-xs">✓</div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Technology Lead / Senior Enterprise Architect</h3>
+                            <p class="text-green-400 font-medium">Apple / IT-SCIENT Engagements</p>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-400 mt-2 md:mt-0 px-3 py-1 bg-slate-800 rounded-full w-fit">Multi-Year Tenure</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Led complex backend modernization initiatives across high-scale enterprise environments. Architected resilient microservices, optimized high-throughput transactional systems, and spearheaded legacy modernization roadmaps.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Java</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Spring Boot</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Microservices</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Performance Tuning</span>
+                    </div>
+                </div>
+
+                <!-- Infosys Roles -->
+                <div class="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 relative">
+                    <div class="absolute -left-3 top-8 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-slate-950 font-bold text-xs">✓</div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-white">Senior Software Engineer & Tech Lead</h3>
+                            <p class="text-green-400 font-medium">Infosys</p>
+                        </div>
+                        <span class="text-sm font-semibold text-slate-400 mt-2 md:mt-0 px-3 py-1 bg-slate-800 rounded-full w-fit">9+ Years Dedicated Service</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                        Spearheaded robust enterprise solutions, mentored engineering teams, and delivered scalable backend platforms. Transitioned legacy JSP architectures to modern Java frameworks, ensuring minimal downtime and peak operational efficiency.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Java 21</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Spring Framework</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Cloud</span>
+                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Legacy Modernization</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-        <ul class="highlights">
-          <li>Optimized performance by 70% using <strong>Parallel Processing</strong> for concurrent data aggregation.</li>
-          <li>Implemented <strong>Redis caching</strong> to manage high-traffic global requests with minimal latency.</li>
-          <li>Delivered critical features within the <strong>Apple ecosystem</strong> with a 98% on-schedule rate.</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Enterprise Knowledge Assistant</h3>
-        <p class="description">A <strong>RAG-based</strong> system designed to bridge enterprise documentation with Generative AI.</p>
-        
-        <div class="tech-stack">
-          <span>Python</span> <span>LangChain</span> <span>Hugging Face</span> <span>Vector DB</span>
-        </div>
-        
-        <ul class="highlights">
-          <li>Leveraged <strong>LangChain</strong> to implement autonomous document retrieval for technical specs.</li>
-          <li>Utilized <strong>Transformers</strong> to enhance semantic search accuracy across legacy architectures.</li>
-          <li>Focused on <strong>Future-Proofing</strong> enterprise systems through modern AI evaluation.</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h3>Predictive Performance Monitor</h3>
-        <p class="description">Proactive monitoring tool using <strong>Machine Learning</strong> to predict system bottlenecks.</p>
-        
-        <div class="tech-stack">
-          <span>ANN/RNN</span> <span>Pandas</span> <span>NumPy</span> <span>TensorFlow</span>
-        </div>
-        
-        <ul class="highlights">
-          <li>Applied <strong>Neural Network design</strong> to analyze historical system performance metrics.</li>
-          <li>Reduced incident resolution time by 30% through predictive <strong>Root Cause Analysis</strong>.</li>
-          <li>Integrated with <strong>Splunk and Grafana</strong> for real-time observability and alerting.</li>
-        </ul>
-      </article>
-      <article class="card">
-  <h3>Enterprise Performance Modernization</h3>
-  <p class="muted">High-Scale Feature Development • 2024</p>
-  
-  <div class="tech-stack">
-    <span>Java 21</span>
-    <span>Spring Boot 3</span>
-    <span>Redis</span>
-    <span>CompletableFuture</span>
-  </div>
-
-  <ul class="highlights">
-    <li>Led the architectural migration of legacy JSP modules to a <strong>Java 21</strong> microservices ecosystem, leveraging <strong>Virtual Threads</strong> to handle massive concurrent traffic spikes.</li>
-    <li>Optimized the <strong>iPhone repair pricing system</strong> by implementing <strong>Parallel Processing</strong> with CompletableFuture and <strong>Redis</strong> caching, ensuring low-latency global performance.</li>
-    <li>Achieved a <strong>70% application performance boost</strong> and a 15% reduction in delivery time through modernized code review standards.</li>
-  </ul>
-</article>
-      <article class="card">
-  <h3>Agentic AI Service Diagnosis Engine</h3>
-  <p class="muted">AI Integration & Future-Proofing • 2025</p>
-  
-  <div class="tech-stack">
-    <span>Python</span>
-    <span>LangChain</span>
-    <span>Hugging Face</span>
-    <span>TensorFlow</span>
-  </div>
-
-  <ul class="highlights">
-    <li>Architected an <strong>Agentic AI</strong> framework using <strong>LangChain</strong> and <strong>Python</strong> to automate Root Cause Analysis (RCA) across distributed enterprise systems.</li>
-    <li>Engineered automated diagnosis pipelines that reduced incident resolution time by <strong>30%</strong>, identifying system design bottlenecks before they reached production.</li>
-    <li>Demonstrated <strong>Operational Excellence</strong> by bridging traditional Java backend metrics with modern <strong>ML</strong> observability tools.</li>
-  </ul>
-</article>
-<article class="card">
-  <h3>Global Scale Architecture Orchestration</h3>
-  <p class="muted">Strategic Delivery • 2022 – 2023</p>
-  
-  <div class="tech-stack">
-    <span>Oracle DB</span>
-    <span>MongoDB</span>
-    <span>Architecture HLD/LLD</span>
-    <span>Compliance</span>
-  </div>
-
-  <ul class="highlights">
-    <li>Directed global software development teams across <strong>Austin, Santa Clara, and Hyderabad</strong> to deliver end-to-end lifecycle solutions for high-stakes enterprise partners.</li>
-    <li>Maintained a <strong>98% on-schedule delivery rate</strong> for 5+ complex projects by enforcing strict secure API design and comprehensive <strong>HLD/LLD documentation</strong>.</li>
-    <li>Managed data integrity across hybrid database environments, including <strong>MongoDB</strong> and <strong>Oracle DB</strong>, to meet strict global security requirements.</li>
-  </ul>
-</article>
-    </div>
-  </div>
-</section>
-
-    <section id="education" class="section">
-      <div class="container">
-        <h2>Education & Certifications</h2>
-        <div class="grid cards verticalline">
-          <article class="card"><h3>Master in Computer Applications</h3><p>Jawaharlal Nehru Technological University, Hyderabad</p></article>
-          <article class="card"><h3>Bachelor in Computer, Maths & Statistics</h3><p>Osmania University, Hyderabad</p></article>
-          <article class="card"><h3>Certified ScrumMaster (CSM)</h3><p>Scrum Alliance (issued 2015 - 2022)</p></article>
-        </div>
-      </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
+                <span class="text-green-500">04.</span> Featured Projects
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-white">Enterprise Java Modernization</h3>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">Core Enterprise</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Modernized legacy application architectures to Java 21 and Spring Boot, incorporating Redis caching, asynchronous execution via CompletableFuture, and high-performance REST APIs for enterprise workloads.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Java 21</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Spring Boot</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Redis</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">CompletableFuture</span>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Project 2 -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-white">ChoreQuest AI</h3>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">AI Agents Capstone</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Developed a custom gamified web application featuring multi-agent orchestration, intelligent task tracking, point systems, and reward tiers using Python, LangChain, and OpenAI.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">LangChain</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">OpenAI</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">MCP Agents</span>
+                        </div>
+                    </div>
+                </div>
 
-<section id="contact" class="section">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-form-wrap card">
-        <h2>Let's Connect</h2>
-        <p class="lead">Available for architectural consulting, AI innovation, and professional networking.</p>
+                <!-- Project 3 -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-white">Enterprise RAG & Knowledge Assistant</h3>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">AI & Knowledge</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Engineered robust Retrieval-Augmented Generation pipelines integrating vector databases and semantic search for accurate enterprise knowledge retrieval and synthesis.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">LangChain</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Vector DB</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Semantic Search</span>
+                        </div>
+                    </div>
+                </div>
 
-        <form id="contactForm" action="https://formspree.io/f/mgokzbee" method="POST" class="contact-form">
-          <div class="form-grid">
-            <div class="field">
-              <label for="cfName">Name</label>
-              <input type="text" id="cfName" name="name" required placeholder="Your Name">
-              <div id="cfNameHint" class="field-hint"></div>
+                <!-- Project 4 -->
+                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-xl font-bold text-white">MCP Server & AI Integration</h3>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">Agentic Architecture</span>
+                        </div>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            Built Model Context Protocol (MCP) servers enabling seamless, secure abstraction layers for AI agents to interact with enterprise APIs and contextual data repositories.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">MCP</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Python</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">API Orchestration</span>
+                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">AI Agents</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="field">
-              <label for="cfEmail">Email</label>
-              <input type="email" id="cfEmail" name="email" required placeholder="your@email.com">
-              <div id="cfEmailHint" class="field-hint"></div>
-            </div>
-            <div class="field form-span-2">
-              <label for="cfSubject">Subject</label>
-              <input type="text" id="cfSubject" name="subject" required placeholder="How can I help?">
-              <div id="cfSubjectHint" class="field-hint"></div>
-            </div>
-            <div class="field form-span-2">
-              <label for="cfMessage">Message</label>
-              <textarea id="cfMessage" name="message" required placeholder="Describe your project or inquiry..."></textarea>
-              <div id="cfMessageHint" class="field-hint"></div>
-            </div>
-            <div style="display:none;">
-              <label>Keep this field blank</label>
-              <input type="text" name="_gotcha">
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" id="cfSubmit" class="btn primary">Send Message</button>
-            <div id="cfStatus" class="form-status"></div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
+        </div>
+    </section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Jugal Mahendra. Built with HTML, CSS & JavaScript.</p>
-    </div>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Get In Touch</h2>
+            <p class="text-slate-300 max-w-xl mx-auto mb-10">
+                I am actively exploring Technology Lead and Senior Java Backend / GenAI engineering opportunities in Austin, TX. Let's build something exceptional together.
+            </p>
+            <div class="flex justify-center gap-6">
+                <a href="mailto:jugalmahendra@gmail.com" class="px-8 py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-semibold transition shadow-lg shadow-green-900/40 flex items-center gap-3">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://linkedin.com/in/jugalmahendra" target="_blank" class="px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition flex items-center gap-3">
+                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <script src="main.js"></script>
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm">
+        <p>&copy; 2026 Jugal Mahendra. All rights reserved. Hosted on GitHub Pages.</p>
+    </footer>
+
 </body>
 </html>
+
