@@ -1,343 +1,766 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugal Mahendra | Technology Lead & Senior Java Backend Specialist</title>
-    <meta name="description" content="Portfolio of Jugal Mahendra - Technology Lead, Senior Java Backend Specialist, and GenAI Engineer building scalable enterprise platforms.">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: { 50: '#f0fdf4', 100: '#dcfce7', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' },
-                        darkBg: '#0f172a',
-                        cardBg: '#1e293b'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jugal Mahendra — Technology Lead and Senior Java Backend Specialist with 17+ years of enterprise engineering experience, including Generative AI and agent engineering.">
+  <title>Jugal Mahendra | Technology Lead & Java Backend Specialist</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --surface: #131e32;
+      --surface-alt: #1a2940;
+      --text: #e8eef7;
+      --muted: #a8b8cc;
+      --accent: #60a5fa;
+      --accent-2: #38bdf8;
+      --border: #30425b;
+      --success: #86efac;
+      --error: #fca5a5;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-2); }
+    button, input, textarea { font: inherit; }
+    button { cursor: pointer; }
+    .container { width: min(92%, var(--max)); margin: auto; }
+    .section { padding: 82px 0; }
+    .section-alt { background: #101b2d; }
+    .eyebrow {
+      color: var(--accent-2);
+      font-size: .8rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.25; }
+    h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); margin: 12px 0; }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin: 0 0 18px; }
+    h3 { font-size: 1.15rem; margin: 0 0 12px; }
+    p { margin: 0 0 17px; }
+    .lead { color: var(--muted); font-size: 1.08rem; }
+    .muted { color: var(--muted); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 25px;
+    }
+    .grid { display: grid; gap: 20px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 9px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      transition: background .2s, transform .2s;
+    }
+    .btn:hover { transform: translateY(-2px); color: white; }
+    .btn.primary {
+      background: var(--accent);
+      color: #081426;
+      border-color: var(--accent);
+    }
+    .btn.primary:hover { background: #93c5fd; }
+    .btn:disabled { opacity: .65; cursor: wait; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .tag {
+      background: var(--surface-alt);
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      padding: 5px 10px;
+      color: #cbdcf0;
+      font-size: .83rem;
+    }
+
+    /* Navigation */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, .96);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 72px;
+      gap: 20px;
+    }
+    .brand { color: white; font-weight: 800; font-size: 1.2rem; }
+    .nav-links { display: flex; align-items: center; gap: 21px; }
+    .nav-links a { color: var(--muted); font-size: .9rem; }
+    .nav-links a:hover { color: white; }
+    .menu-toggle { display: none; }
+
+    /* Hero */
+    .hero { padding: 112px 0 95px; }
+    .hero-inner { max-width: 870px; }
+    .hero-role {
+      font-size: clamp(1.2rem, 2.4vw, 1.65rem);
+      color: #bfdbfe;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .hero .lead { max-width: 750px; font-size: 1.15rem; }
+    .hero .actions { margin-top: 28px; }
+    .stats { margin-top: 45px; }
+    .stat-number {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: white;
+      display: block;
+    }
+    .stat-label { font-size: .9rem; color: var(--muted); }
+
+    /* Experience */
+    .timeline { display: grid; gap: 18px; }
+    .timeline-card { border-left: 3px solid var(--accent); }
+    .meta { font-size: .88rem; color: var(--accent-2); margin-bottom: 10px; }
+    ul { padding-left: 21px; margin: 10px 0 0; }
+    li { margin-bottom: 8px; }
+
+    /* Projects */
+    .project-card { display: flex; flex-direction: column; }
+    .project-card .tags { margin-top: auto; padding-top: 15px; }
+    .project-link { display: inline-block; margin-top: 15px; font-weight: 700; }
+
+    /* Contact form */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(270px, 1fr);
+      gap: 22px;
+    }
+    .contact-form-wrap { padding: 32px; }
+    .contact-form { margin-top: 24px; }
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+    }
+    .form-span-2 { grid-column: span 2; }
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: .9rem;
+      font-weight: 650;
+    }
+    .field input, .field textarea {
+      display: block;
+      width: 100%;
+      border: 1px solid #415570;
+      border-radius: 9px;
+      padding: 12px 14px;
+      background: #0c1728;
+      color: white;
+      outline: none;
+    }
+    .field input:focus, .field textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(96,165,250,.15);
+    }
+    .field textarea { min-height: 155px; resize: vertical; }
+    .field-hint { font-size: .78rem; color: var(--error); min-height: 4px; }
+    .form-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .form-status { font-size: .9rem; }
+    .form-status.success { color: var(--success); }
+    .form-status.error { color: var(--error); }
+    .contact-links { display: grid; gap: 12px; margin-top: 20px; }
+    .contact-links a { overflow-wrap: anywhere; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 26px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+
+    @media (max-width: 850px) {
+      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .menu-toggle {
+        display: inline-block;
+        color: white;
+        background: transparent;
+        border: 1px solid var(--border);
+        padding: 7px 12px;
+        border-radius: 7px;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 71px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 20px 4%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links.open { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .section { padding: 62px 0; }
+      .hero { padding: 75px 0; }
+      .grid-2, .grid-3, .form-grid { grid-template-columns: 1fr; }
+      .form-span-2 { grid-column: auto; }
+      .contact-form-wrap { padding: 22px; }
+      .card { padding: 21px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-green-500 selection:text-slate-950">
+<body>
 
-    <!-- Header / Navbar -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-                <span class="text-green-500">&lt;</span>Jugal Mahendra<span class="text-green-500">/&gt;</span>
+<header class="site-header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a class="brand" href="#home">JM.</a>
+    <button class="menu-toggle" id="menuToggle"
+      aria-expanded="false" aria-controls="navLinks"
+      aria-label="Toggle navigation">Menu</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="eyebrow">Enterprise Backend Engineering & AI Innovation</div>
+      <h1>Jugal Mahendra</h1>
+      <div class="hero-role">
+        Technology Lead | Senior Java Backend Specialist | GenAI Engineering
+      </div>
+      <p class="lead">
+        17+ years delivering reliable enterprise applications, modernizing
+        Java platforms, and improving backend performance. Combining
+        expertise in Java, Spring, microservices, and production reliability
+        with practical Generative AI engineering.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Let's Connect</a>
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/jugalkmahendra/"
+           target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="btn" href="https://github.com/jugalmahendra"
+           target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+
+      <div class="grid grid-3 stats">
+        <div>
+          <span class="stat-number">17+</span>
+          <span class="stat-label">Years of Experience</span>
+        </div>
+        <div>
+          <span class="stat-number">70%</span>
+          <span class="stat-label">Application Performance Improvement</span>
+        </div>
+        <div>
+          <span class="stat-number">98%</span>
+          <span class="stat-label">On-Time Delivery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="eyebrow">About Me</div>
+      <h2>Building Reliable Systems. Modernizing for the Future.</h2>
+      <div class="grid grid-2">
+        <div>
+          <p>
+            I am a Technology Lead and Senior Java Backend Specialist with
+            over 17 years of experience developing, modernizing, and
+            supporting enterprise applications, including more than
+            12 years supporting Apple projects through Infosys and
+            IT-SCIENT.
+          </p>
+          <p>
+            My experience covers backend engineering, REST API development,
+            Java and Spring modernization, performance optimization,
+            CI/CD, incident management, and production stability.
+          </p>
+        </div>
+        <div>
+          <p>
+            I have collaborated with distributed engineering teams,
+            coordinated releases, performed code reviews, investigated
+            production incidents, and supported Agile delivery.
+          </p>
+          <p>
+            I am also expanding my engineering capabilities through
+            hands-on Generative AI projects using Python, LangChain,
+            OpenAI APIs, retrieval-augmented generation (RAG), and
+            Model Context Protocol (MCP).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="eyebrow">Technical Expertise</div>
+      <h2>Skills & Technologies</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Backend Engineering</h3>
+          <p class="muted">Enterprise-grade application development.</p>
+          <div class="tags">
+            <span class="tag">Java 21</span>
+            <span class="tag">Spring Framework</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">CompletableFuture</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Data & Performance</h3>
+          <p class="muted">Performance optimization and integration.</p>
+          <div class="tags">
+            <span class="tag">Redis</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Oracle</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Caching</span>
+            <span class="tag">Concurrency</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>DevOps & Cloud</h3>
+          <p class="muted">Deployment automation and cloud exposure.</p>
+          <div class="tags">
+            <span class="tag">Jenkins</span>
+            <span class="tag">Git</span>
+            <span class="tag">Ansible</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Docker</span>
+            <span class="tag">AWS Exposure</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Production Reliability</h3>
+          <p class="muted">Operational support and root cause analysis.</p>
+          <div class="tags">
+            <span class="tag">Splunk</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">RCA</span>
+            <span class="tag">Incident Management</span>
+            <span class="tag">Monitoring</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Generative AI</h3>
+          <p class="muted">Independent projects and hands-on learning.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">OpenAI APIs</span>
+            <span class="tag">RAG</span>
+            <span class="tag">MCP</span>
+            <span class="tag">AI Agents</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Technical Leadership</h3>
+          <p class="muted">Cross-functional enterprise delivery.</p>
+          <div class="tags">
+            <span class="tag">Agile</span>
+            <span class="tag">Scrum</span>
+            <span class="tag">Code Reviews</span>
+            <span class="tag">Mentorship</span>
+            <span class="tag">Release Planning</span>
+            <span class="tag">System Design</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="eyebrow">Professional Journey</div>
+      <h2>Experience</h2>
+      <div class="timeline">
+        <article class="card timeline-card">
+          <div class="meta">October 2021 – Present</div>
+          <h3>Technology Lead — IT-SCIENT | Apple Account</h3>
+          <p class="muted">
+            Continued supporting Apple enterprise applications through
+            IT-SCIENT, focusing on backend engineering, modernization,
+            performance, and production reliability.
+          </p>
+          <ul>
+            <li>Developed and modernized Java/Spring-based backend components and REST APIs supporting enterprise applications.</li>
+            <li>Improved application performance by approximately 70% through backend optimization and asynchronous processing.</li>
+            <li>Applied Redis caching and Java CompletableFuture to improve responsiveness and processing efficiency.</li>
+            <li>Supported CI/CD releases, monitoring, incident investigations, and production recovery.</li>
+            <li>Collaborated with distributed teams on technical design, implementation, code quality, and delivery.</li>
+          </ul>
+        </article>
+
+        <article class="card timeline-card">
+          <div class="meta">July 2012 – October 2021</div>
+          <h3>Technical Analyst / Technology Lead — Infosys | Apple Client</h3>
+          <p class="muted">
+            Progressed through technical and leadership responsibilities
+            while supporting Apple enterprise applications.
+          </p>
+          <ul>
+            <li>Delivered Java/Spring application enhancements, integrations, and backend services.</li>
+            <li>Participated in requirements analysis, design reviews, development, testing, and release planning.</li>
+            <li>Coordinated across US, India, and APAC teams to support enterprise delivery.</li>
+            <li>Conducted troubleshooting, root cause analysis, and production support.</li>
+            <li>Reviewed code, supported secure API development, and improved maintainability.</li>
+          </ul>
+        </article>
+
+        <article class="card timeline-card">
+          <div class="meta">October 2010 – June 2012</div>
+          <h3>Software Engineering — ValueLabs | HP Client</h3>
+          <p class="muted">
+            Enterprise application development, integration, and
+            production support.
+          </p>
+          <ul>
+            <li>Contributed to Java enterprise application development and maintenance.</li>
+            <li>Supported application integration, testing, releases, and troubleshooting.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Projects & Engineering Highlights</h2>
+      <div class="grid grid-2">
+        <article class="card project-card">
+          <h3>Enterprise Java Performance Modernization</h3>
+          <p class="muted">Professional engineering experience</p>
+          <p>
+            Modernization and optimization of enterprise Java backend
+            processing using asynchronous execution, Redis caching,
+            and Spring-based services. Contributed to a measured
+            performance improvement of approximately 70%.
+          </p>
+          <div class="tags">
+            <span class="tag">Java 21</span>
+            <span class="tag">Spring</span>
+            <span class="tag">Redis</span>
+            <span class="tag">CompletableFuture</span>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>ChoreQuest AI — Multi-Agent Family Task Assistant</h3>
+          <p class="muted">Independent GenAI capstone project</p>
+          <p>
+            An AI-assisted family chore management application
+            featuring an Orchestrator Agent for task assignment
+            and a Motivator Agent for engagement and reward
+            recommendations. Uses tool-based workflows and
+            family-oriented incentive tracking.
+          </p>
+          <a class="project-link"
+             href="https://chorequest-web-bay.vercel.app/"
+             target="_blank" rel="noopener noreferrer">
+            View Live Project →
+          </a>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">OpenAI APIs</span>
+            <span class="tag">MCP</span>
+            <span class="tag">AI Agents</span>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>RAG & Enterprise Knowledge Retrieval</h3>
+          <p class="muted">GenAI engineering exploration</p>
+          <p>
+            Exploring retrieval-augmented generation patterns,
+            document retrieval, contextual question answering,
+            and LLM integration for enterprise knowledge workflows.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">RAG</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">LLMs</span>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3>Production Reliability & Incident Response</h3>
+          <p class="muted">Professional engineering experience</p>
+          <p>
+            Enterprise production monitoring, troubleshooting,
+            root cause analysis, and incident coordination
+            using operational telemetry and cross-team
+            engineering practices.
+          </p>
+          <div class="tags">
+            <span class="tag">Splunk</span>
+            <span class="tag">Grafana</span>
+            <span class="tag">RCA</span>
+            <span class="tag">CI/CD</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="eyebrow">Education & Credentials</div>
+      <h2>Education & Certifications</h2>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Master of Computer Applications</h3>
+          <p class="muted">Jawaharlal Nehru Technological University, Hyderabad</p>
+        </article>
+        <article class="card">
+          <h3>Bachelor's Degree</h3>
+          <p class="muted">Computer Science, Mathematics & Statistics</p>
+          <p class="muted">Osmania University</p>
+        </article>
+        <article class="card">
+          <h3>Professional Certifications</h3>
+          <p>Certified ScrumMaster</p>
+          <p>Generative AI Engineering — Outskill</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT US -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Contact Me</h2>
+      <div class="contact-grid">
+        <div class="contact-form-wrap card">
+          <h3>Let's Connect</h3>
+          <p class="lead">
+            Open to senior Java backend engineering, technical
+            leadership, GenAI engineering opportunities, and
+            professional networking.
+          </p>
+
+          <form id="contactForm"
+                action="https://formspree.io/f/mgokzbee"
+                method="POST"
+                class="contact-form">
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="cfName">Name</label>
+                <input type="text" id="cfName" name="name"
+                       required maxlength="120"
+                       autocomplete="name"
+                       placeholder="Your Name">
+                <div id="cfNameHint" class="field-hint"></div>
+              </div>
+
+              <div class="field">
+                <label for="cfEmail">Email</label>
+                <input type="email" id="cfEmail" name="email"
+                       required maxlength="254"
+                       autocomplete="email"
+                       placeholder="your@email.com">
+                <div id="cfEmailHint" class="field-hint"></div>
+              </div>
+
+              <div class="field form-span-2">
+                <label for="cfSubject">Subject</label>
+                <input type="text" id="cfSubject" name="subject"
+                       required maxlength="200"
+                       placeholder="How can I help?">
+                <div id="cfSubjectHint" class="field-hint"></div>
+              </div>
+
+              <div class="field form-span-2">
+                <label for="cfMessage">Message</label>
+                <textarea id="cfMessage" name="message"
+                          required minlength="10"
+                          maxlength="5000"
+                          placeholder="Describe your inquiry..."></textarea>
+                <div id="cfMessageHint" class="field-hint"></div>
+              </div>
+
+              <!-- Spam honeypot -->
+              <div style="position:absolute;left:-9999px"
+                   aria-hidden="true">
+                <label for="cfGotcha">Leave this field blank</label>
+                <input type="text" id="cfGotcha" name="_gotcha"
+                       tabindex="-1" autocomplete="off">
+              </div>
+            </div>
+
+            <input type="hidden" name="_subject"
+                   value="New Portfolio Contact Submission">
+
+            <div class="form-actions">
+              <button type="submit" id="cfSubmit"
+                      class="btn primary">Send Message</button>
+              <div id="cfStatus" class="form-status"
+                   role="status" aria-live="polite"></div>
+            </div>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h3>Professional Profiles</h3>
+          <p class="muted">
+            Connect with me for technical discussions,
+            professional opportunities, and collaboration.
+          </p>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/jugalkmahendra/"
+               target="_blank" rel="noopener noreferrer">
+              LinkedIn Profile ↗
             </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-green-400 transition">About</a>
-                <a href="#expertise" class="hover:text-green-400 transition">Expertise</a>
-                <a href="#experience" class="hover:text-green-400 transition">Experience</a>
-                <a href="#projects" class="hover:text-green-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-green-400 transition">Contact</a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <a href="https://linkedin.com/in/jugalmahendra" target="_blank" class="text-slate-400 hover:text-green-400 transition text-lg"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/JugalMahendra" target="_blank" class="text-slate-400 hover:text-green-400 transition text-lg"><i class="fab fa-github"></i></a>
-                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-lg bg-green-600 hover:bg-green-500 text-white text-sm font-semibold transition shadow-lg shadow-green-900/30">Get in Touch</a>
-            </div>
-        </div>
-    </header>
+            <a href="https://github.com/jugalmahendra"
+               target="_blank" rel="noopener noreferrer">
+              GitHub Profile ↗
+            </a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden border-b border-slate-800/60 bg-gradient-to-b from-slate-900/50 to-slate-950">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(34,197,94,0.15),rgba(255,255,255,0))]"></div>
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-xs font-semibold mb-6">
-                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Available for Technology Lead & Senior Roles (Austin, TX)
-                </div>
-                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
-                    Jugal Mahendra
-                </h1>
-                <p class="text-xl sm:text-2xl font-semibold text-green-400 mb-6">
-                    Technology Lead | Senior Java Backend Specialist | GenAI Engineer
-                </p>
-                <p class="text-lg text-slate-300 leading-relaxed mb-10">
-                    Building scalable enterprise platforms through Java, Spring Boot, microservices, cloud modernization, and Generative AI. 17+ years of engineering excellence solving complex backend challenges.
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" class="px-6 py-3 rounded-xl bg-green-600 hover:bg-green-500 text-white font-semibold transition shadow-lg shadow-green-900/40 flex items-center gap-2">
-                        View Projects <i class="fas fa-arrow-right text-xs"></i>
-                    </a>
-                    <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition">
-                        Let's Connect
-                    </a>
-                </div>
-            </div>
+<footer>
+  <div class="container">
+    © <span id="year"></span> Jugal Mahendra.
+    Built with HTML, CSS & JavaScript.
+  </div>
+</footer>
 
-            <!-- Statistics Grid (Fixed counters) -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-12 border-t border-slate-800/80">
-                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
-                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">17+</div>
-                    <div class="text-sm font-medium text-slate-400">Years Experience</div>
-                </div>
-                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
-                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">9+</div>
-                    <div class="text-sm font-medium text-slate-400">Years Supporting Apple</div>
-                </div>
-                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
-                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">Java 21</div>
-                    <div class="text-sm font-medium text-slate-400">Core Tech Stack</div>
-                </div>
-                <div class="bg-slate-900/60 p-6 rounded-2xl border border-slate-800">
-                    <div class="text-3xl sm:text-4xl font-black text-green-400 mb-1">RAG & AI</div>
-                    <div class="text-sm font-medium text-slate-400">Agentic Architecture</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<script>
+  "use strict";
 
-    <!-- About Section -->
-    <section id="about" class="py-24 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="max-w-3xl">
-                <h2 class="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                    <span class="text-green-500">01.</span> About Me
-                </h2>
-                <div class="space-y-6 text-slate-300 text-lg leading-relaxed">
-                    <p>
-                        I am a Technology Lead and Backend Software Architect with over 17 years of extensive enterprise engineering experience. Throughout my career—including over 9 years supporting Apple teams via Infosys—I have specialized in architecting high-performance Java enterprise systems, Spring Boot microservices, robust cloud deployments, and advanced AI integrations.
-                    </p>
-                    <p>
-                        My core differentiator lies in combining deep, battle-tested enterprise backend delivery with modern Generative AI engineering (RAG pipelines, LangChain, MCP servers, and multi-agent workflows). Whether modernizing legacy JSP applications to Java 21 or building intelligent automation solutions, I focus on clean architecture, scalability, and measurable business impact.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+  // Current year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
 
-    <!-- Technical Expertise -->
-    <section id="expertise" class="py-24 bg-slate-900/40 border-y border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
-                <span class="text-green-500">02.</span> Technical Expertise
-            </h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-green-500/50 transition">
-                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 text-xl mb-6">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Enterprise Java & Backend</h3>
-                    <ul class="space-y-2 text-slate-300 text-sm">
-                        <li>• Java 21 / Java EE</li>
-                        <li>• Spring Boot & Spring Framework</li>
-                        <li>• Microservices Architecture</li>
-                        <li>• REST APIs, Redis, CompletableFuture</li>
-                        <li>• Enterprise Performance Tuning</li>
-                    </ul>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-green-500/50 transition">
-                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 text-xl mb-6">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">Cloud & DevOps</h3>
-                    <ul class="space-y-2 text-slate-300 text-sm">
-                        <li>• Cloud Deployments & Infrastructure</li>
-                        <li>• CI/CD Pipeline Automation</li>
-                        <li>• Legacy JSP to Java 21 Modernization</li>
-                        <li>• Scalable Containerized Workflows</li>
-                        <li>• Reliability & System Monitoring</li>
-                    </ul>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 hover:border-green-500/50 transition">
-                    <div class="w-12 h-12 rounded-xl bg-green-500/10 flex items-center justify-center text-green-400 text-xl mb-6">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-4">GenAI & AI Agents</h3>
-                    <ul class="space-y-2 text-slate-300 text-sm">
-                        <li>• Python & LangChain Integration</li>
-                        <li>• Model Context Protocol (MCP) Servers</li>
-                        <li>• Enterprise RAG & Vector Databases</li>
-                        <li>• Multi-Agent Orchestration</li>
-                        <li>• Practical AI System Implementations</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+  // Responsive navigation
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-    <!-- Experience Section -->
-    <section id="experience" class="py-24 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
-                <span class="text-green-500">03.</span> Professional Experience
-            </h2>
-            <div class="space-y-12 max-w-4xl">
-                <!-- Apple / IT-SCIENT Roles -->
-                <div class="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 relative">
-                    <div class="absolute -left-3 top-8 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-slate-950 font-bold text-xs">✓</div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Technology Lead / Senior Enterprise Architect</h3>
-                            <p class="text-green-400 font-medium">Apple / IT-SCIENT Engagements</p>
-                        </div>
-                        <span class="text-sm font-semibold text-slate-400 mt-2 md:mt-0 px-3 py-1 bg-slate-800 rounded-full w-fit">Multi-Year Tenure</span>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Led complex backend modernization initiatives across high-scale enterprise environments. Architected resilient microservices, optimized high-throughput transactional systems, and spearheaded legacy modernization roadmaps.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Java</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Spring Boot</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Microservices</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Performance Tuning</span>
-                    </div>
-                </div>
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-                <!-- Infosys Roles -->
-                <div class="bg-slate-900/60 p-8 rounded-2xl border border-slate-800 relative">
-                    <div class="absolute -left-3 top-8 w-6 h-6 rounded-full bg-green-500 flex items-center justify-center text-slate-950 font-bold text-xs">✓</div>
-                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                        <div>
-                            <h3 class="text-xl font-bold text-white">Senior Software Engineer & Tech Lead</h3>
-                            <p class="text-green-400 font-medium">Infosys</p>
-                        </div>
-                        <span class="text-sm font-semibold text-slate-400 mt-2 md:mt-0 px-3 py-1 bg-slate-800 rounded-full w-fit">9+ Years Dedicated Service</span>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-4">
-                        Spearheaded robust enterprise solutions, mentored engineering teams, and delivered scalable backend platforms. Transitioned legacy JSP architectures to modern Java frameworks, ensuring minimal downtime and peak operational efficiency.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Java 21</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Spring Framework</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Cloud</span>
-                        <span class="px-3 py-1 bg-slate-800 text-slate-300 text-xs rounded-md">Legacy Modernization</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-slate-900/40 border-t border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-white mb-12 flex items-center gap-3">
-                <span class="text-green-500">04.</span> Featured Projects
-            </h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white">Enterprise Java Modernization</h3>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">Core Enterprise</span>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Modernized legacy application architectures to Java 21 and Spring Boot, incorporating Redis caching, asynchronous execution via CompletableFuture, and high-performance REST APIs for enterprise workloads.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Java 21</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Spring Boot</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Redis</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">CompletableFuture</span>
-                        </div>
-                    </div>
-                </div>
+  // Contact form
+  const contactForm = document.getElementById("contactForm");
+  const submitButton = document.getElementById("cfSubmit");
+  const formStatus = document.getElementById("cfStatus");
 
-                <!-- Project 2 -->
-                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white">ChoreQuest AI</h3>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">AI Agents Capstone</span>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Developed a custom gamified web application featuring multi-agent orchestration, intelligent task tracking, point systems, and reward tiers using Python, LangChain, and OpenAI.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Python</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">LangChain</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">OpenAI</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">MCP Agents</span>
-                        </div>
-                    </div>
-                </div>
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-                <!-- Project 3 -->
-                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white">Enterprise RAG & Knowledge Assistant</h3>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">AI & Knowledge</span>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Engineered robust Retrieval-Augmented Generation pipelines integrating vector databases and semantic search for accurate enterprise knowledge retrieval and synthesis.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Python</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">LangChain</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Vector DB</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Semantic Search</span>
-                        </div>
-                    </div>
-                </div>
+    formStatus.textContent = "";
+    formStatus.className = "form-status";
 
-                <!-- Project 4 -->
-                <div class="bg-slate-900/80 p-8 rounded-2xl border border-slate-800 flex flex-col justify-between hover:border-green-500/50 transition">
-                    <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-white">MCP Server & AI Integration</h3>
-                            <span class="text-xs font-semibold px-2.5 py-1 bg-green-500/10 text-green-400 rounded-full">Agentic Architecture</span>
-                        </div>
-                        <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                            Built Model Context Protocol (MCP) servers enabling seamless, secure abstraction layers for AI agents to interact with enterprise APIs and contextual data repositories.
-                        </p>
-                    </div>
-                    <div>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">MCP</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">Python</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">API Orchestration</span>
-                            <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs rounded">AI Agents</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    if (!contactForm.reportValidity()) {
+      return;
+    }
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-slate-950">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-white mb-6">Get In Touch</h2>
-            <p class="text-slate-300 max-w-xl mx-auto mb-10">
-                I am actively exploring Technology Lead and Senior Java Backend / GenAI engineering opportunities in Austin, TX. Let's build something exceptional together.
-            </p>
-            <div class="flex justify-center gap-6">
-                <a href="mailto:jugalmahendra@gmail.com" class="px-8 py-4 rounded-xl bg-green-600 hover:bg-green-500 text-white font-semibold transition shadow-lg shadow-green-900/40 flex items-center gap-3">
-                    <i class="fas fa-envelope"></i> Email Me
-                </a>
-                <a href="https://linkedin.com/in/jugalmahendra" target="_blank" class="px-8 py-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition flex items-center gap-3">
-                    <i class="fab fa-linkedin"></i> Connect on LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
+    // Honeypot: ignore automated spam submissions
+    if (document.getElementById("cfGotcha").value.trim()) {
+      return;
+    }
 
-    <!-- Footer -->
-    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm">
-        <p>&copy; 2026 Jugal Mahendra. All rights reserved. Hosted on GitHub Pages.</p>
-    </footer>
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      formStatus.textContent =
+        "Thank you! Your message has been sent successfully.";
+      formStatus.classList.add("success");
+      contactForm.reset();
+
+    } catch (error) {
+      formStatus.textContent =
+        "Unable to send your message. Please try again later.";
+      formStatus.classList.add("error");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = "Send Message";
+    }
+  });
+</script>
 
 </body>
 </html>
-
