@@ -2,834 +2,1492 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jugal Mahendra — Technology Lead and Senior Java Backend Specialist with 17+ years of enterprise engineering experience, including Generative AI and agent engineering.">
-  <title>Jugal Mahendra | Technology Lead & Java Backend Specialist</title>
-  <style>
-    :root {
-      --bg: #0b1120;
-      --surface: #131e32;
-      --surface-alt: #1a2940;
-      --text: #e8eef7;
-      --muted: #a8b8cc;
-      --accent: #60a5fa;
-      --accent-2: #38bdf8;
-      --border: #30425b;
-      --success: #86efac;
-      --error: #fca5a5;
-      --max: 1120px;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Jugal Mahendra — Technology Lead and Senior Java Backend Specialist with 17+ years of experience in Java 21, Spring Boot, microservices, enterprise modernization, production reliability, and Generative AI.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jugalmahendra.github.io/">
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 85px; }
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-2); }
-    button, input, textarea { font: inherit; }
-    button { cursor: pointer; }
-    .container { width: min(92%, var(--max)); margin: auto; }
-    .section { padding: 82px 0; }
-    .section-alt { background: #101b2d; }
-    .eyebrow {
-      color: var(--accent-2);
-      font-size: .8rem;
-      font-weight: 750;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-    }
-    h1, h2, h3 { line-height: 1.25; }
-    h1 { font-size: clamp(2.6rem, 6vw, 4.8rem); margin: 12px 0; }
-    h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin: 0 0 18px; }
-    h3 { font-size: 1.15rem; margin: 0 0 12px; }
-    p { margin: 0 0 17px; }
-    .lead { color: var(--muted); font-size: 1.08rem; }
-    .muted { color: var(--muted); }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 25px;
-    }
-    .grid { display: grid; gap: 20px; }
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 20px;
-      border-radius: 9px;
-      font-weight: 700;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text);
-      transition: background .2s, transform .2s;
-    }
-    .btn:hover { transform: translateY(-2px); color: white; }
-    .btn.primary {
-      background: var(--accent);
-      color: #081426;
-      border-color: var(--accent);
-    }
-    .btn.primary:hover { background: #93c5fd; }
-    .btn:disabled { opacity: .65; cursor: wait; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
-    .tag {
-      background: var(--surface-alt);
-      border: 1px solid var(--border);
-      border-radius: 7px;
-      padding: 5px 10px;
-      color: #cbdcf0;
-      font-size: .83rem;
-    }
+<title>Jugal Mahendra | Technology Lead & Senior Java Backend Specialist</title>
 
-    /* Navigation */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(11, 17, 32, .96);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 72px;
-      gap: 20px;
-    }
-    .brand { color: white; font-weight: 800; font-size: 1.2rem; }
-    .nav-links { display: flex; align-items: center; gap: 21px; }
-    .nav-links a { color: var(--muted); font-size: .9rem; }
-    .nav-links a:hover { color: white; }
-    .menu-toggle { display: none; }
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jugal Mahendra | Technology Lead & Java Backend Specialist">
+<meta property="og:description" content="17+ years in enterprise Java engineering, modernization, production reliability, and practical Generative AI.">
+<meta property="og:url" content="https://jugalmahendra.github.io/">
+<meta property="og:site_name" content="Jugal Mahendra Portfolio">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jugal Mahendra | Technology Lead">
+<meta name="twitter:description" content="Java 21 | Spring Boot | Microservices | GenAI Engineering">
 
-    /* Hero */
-    .hero { padding: 112px 0 95px; }
-    .hero-inner { max-width: 870px; }
-    .hero-role {
-      font-size: clamp(1.2rem, 2.4vw, 1.65rem);
-      color: #bfdbfe;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .hero .lead { max-width: 750px; font-size: 1.15rem; }
-    .hero .actions { margin-top: 28px; }
-    .stats { margin-top: 45px; }
-    .stat-number {
-      font-size: 2.1rem;
-      font-weight: 800;
-      color: white;
-      display: block;
-    }
-    .stat-label { font-size: .9rem; color: var(--muted); }
-
-    /* Experience */
-    .timeline { display: grid; gap: 18px; }
-    .timeline-card { border-left: 3px solid var(--accent); }
-    .meta { font-size: .88rem; color: var(--accent-2); margin-bottom: 10px; }
-    ul { padding-left: 21px; margin: 10px 0 0; }
-    li { margin-bottom: 8px; }
-
-    /* Projects */
-    .project-card { display: flex; flex-direction: column; }
-    .project-card .tags { margin-top: auto; padding-top: 15px; }
-    .project-link { display: inline-block; margin-top: 15px; font-weight: 700; }
-
-    /* Contact form */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(270px, 1fr);
-      gap: 22px;
-    }
-    .contact-form-wrap { padding: 32px; }
-    .contact-form { margin-top: 24px; }
-    .form-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 17px;
-    }
-    .form-span-2 { grid-column: span 2; }
-    .field label {
-      display: block;
-      margin-bottom: 7px;
-      font-size: .9rem;
-      font-weight: 650;
-    }
-    .field input, .field textarea {
-      display: block;
-      width: 100%;
-      border: 1px solid #415570;
-      border-radius: 9px;
-      padding: 12px 14px;
-      background: #0c1728;
-      color: white;
-      outline: none;
-    }
-    .field input:focus, .field textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(96,165,250,.15);
-    }
-    .field textarea { min-height: 155px; resize: vertical; }
-    .field-hint { font-size: .78rem; color: var(--error); min-height: 4px; }
-    .form-actions {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 20px;
-    }
-    .form-status { font-size: .9rem; }
-    .form-status.success { color: var(--success); }
-    .form-status.error { color: var(--error); }
-    .contact-links { display: grid; gap: 12px; margin-top: 20px; }
-    .contact-links a { overflow-wrap: anywhere; }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 26px 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: .88rem;
-    }
-
-    @media (max-width: 850px) {
-      .grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .contact-grid { grid-template-columns: 1fr; }
-      .menu-toggle {
-        display: inline-block;
-        color: white;
-        background: transparent;
-        border: 1px solid var(--border);
-        padding: 7px 12px;
-        border-radius: 7px;
-      }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 71px;
-        left: 0;
-        right: 0;
-        background: var(--bg);
-        border-bottom: 1px solid var(--border);
-        padding: 20px 4%;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .nav-links.open { display: flex; }
-    }
-    @media (max-width: 600px) {
-      .section { padding: 62px 0; }
-      .hero { padding: 75px 0; }
-      .grid-2, .grid-3, .form-grid { grid-template-columns: 1fr; }
-      .form-span-2 { grid-column: auto; }
-      .contact-form-wrap { padding: 22px; }
-      .card { padding: 21px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .btn { transition: none; }
-    }
-  </style>
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Jugal Mahendra",
   "url": "https://jugalmahendra.github.io/",
   "jobTitle": "Technology Lead",
-  "description": "Senior Java Backend Specialist and Technology Lead with 17+ years of enterprise application engineering experience.",
+  "description": "Senior Java Backend Specialist with 17+ years of enterprise engineering experience.",
   "sameAs": [
     "https://www.linkedin.com/in/jugalkmahendra/",
     "https://github.com/jugalmahendra"
   ],
   "knowsAbout": [
-    "Java 21",
-    "Spring Framework",
-    "Spring Boot",
-    "Microservices",
-    "REST APIs",
-    "Enterprise Application Modernization",
-    "CI/CD",
-    "Production Reliability",
-    "Generative AI",
-    "LangChain",
-    "Retrieval-Augmented Generation",
-    "Model Context Protocol"
+    "Java 21", "Spring Boot", "Spring Framework",
+    "Microservices", "REST APIs", "Redis",
+    "Enterprise Modernization", "CI/CD",
+    "Production Reliability", "Generative AI",
+    "LangChain", "RAG", "Model Context Protocol"
   ]
 }
 </script>
-  <title>
-  Jugal Mahendra | Senior Java Backend Specialist & Technology Lead
-</title>
 
-<meta
-  name="description"
-  content="Jugal Mahendra is a Technology Lead and Senior Java Backend Specialist with 17+ years of enterprise engineering experience, specializing in Java 21, Spring Boot, microservices, enterprise modernization, production reliability, and Generative AI.">
+<!-- Apply theme before page renders to prevent flashing -->
+<script>
+(function () {
+  var saved = null;
+  try {
+    saved = localStorage.getItem("portfolio-theme");
+  } catch (e) {}
 
-<meta
-  name="robots"
-  content="index, follow">
+  var dark = saved === "dark" ||
+    (saved !== "light" &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches);
 
-<link
-  rel="canonical"
-  href="https://jugalmahendra.github.io/">
-  <!-- Open Graph -->
-<meta property="og:type" content="website">
+  document.documentElement.setAttribute(
+    "data-theme", dark ? "dark" : "light"
+  );
+  document.documentElement.style.colorScheme = dark ? "dark" : "light";
+})();
+</script>
 
-<meta
-  property="og:title"
-  content="Jugal Mahendra | Technology Lead & Senior Java Backend Specialist">
+<style>
+/* ========================================
+   DESIGN SYSTEM
+======================================== */
 
-<meta
-  property="og:description"
-  content="17+ years in enterprise backend engineering, Java modernization, Spring Boot, microservices, production reliability, and Generative AI.">
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-alt: #fafbfc;
+  --text: #111318;
+  --muted: #606875;
+  --border: #e5e8ee;
+  --blue: #2563eb;
+  --dark-button: #17191e;
+  --button-text: #ffffff;
+  --tag-bg: #f1f3f7;
+  --tag-text: #475467;
+  --icon-bg: #eff5ff;
+  --icon-text: #315fba;
+  --header-bg: rgba(255,255,255,.94);
+  --hero-start: #ffffff;
+  --hero-end: #f2f6ff;
+  --contact-start: #f2f5fb;
+  --contact-end: #eaf0fb;
+  --input-bg: #ffffff;
+  --input-border: #d6dce6;
+  --shadow: 0 12px 35px rgba(30,41,59,.045);
+  --radius: 18px;
+  --max: 1160px;
+  --success: #15803d;
+  --error: #b91c1c;
+  color-scheme: light;
+}
 
-<meta
-  property="og:url"
-  content="https://jugalmahendra.github.io/">
+/* Dark theme variables */
+html[data-theme="dark"] {
+  --bg: #0b1120;
+  --surface: #142035;
+  --surface-alt: #101a2b;
+  --text: #f1f5f9;
+  --muted: #a9b7ca;
+  --border: #29384f;
+  --blue: #93c5fd;
+  --dark-button: #e2e8f0;
+  --button-text: #0b1120;
+  --tag-bg: #25344b;
+  --tag-text: #d7e3f3;
+  --icon-bg: #233858;
+  --icon-text: #bfdbfe;
+  --header-bg: rgba(11,17,32,.96);
+  --hero-start: #0b1120;
+  --hero-end: #162a49;
+  --contact-start: #15243b;
+  --contact-end: #1b3152;
+  --input-bg: #0b1627;
+  --input-border: #42536c;
+  --shadow: 0 12px 35px rgba(0,0,0,.2);
+  --success: #86efac;
+  --error: #fca5a5;
+  color-scheme: dark;
+}
 
-<meta property="og:site_name" content="Jugal Mahendra Portfolio">
+* { box-sizing: border-box; }
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary">
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 
-<meta
-  name="twitter:title"
-  content="Jugal Mahendra | Technology Lead">
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Inter, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background .25s, color .25s;
+}
 
-<meta
-  name="twitter:description"
-  content="Senior Java Backend Specialist | Spring Boot | Microservices | GenAI Engineering">
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.container {
+  width: min(92%, var(--max));
+  margin: auto;
+}
+
+.section { padding: 90px 0; }
+.section-soft { background: var(--surface-alt); }
+
+.eyebrow {
+  color: var(--blue);
+  font-size: .76rem;
+  font-weight: 750;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  margin-bottom: 12px;
+}
+
+h1, h2, h3 {
+  letter-spacing: -.035em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 5.5vw, 5.3rem);
+  margin: 0 0 23px;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  margin: 0 0 18px;
+}
+
+h3 {
+  font-size: 1.18rem;
+  margin: 0 0 12px;
+}
+
+p { margin: 0 0 17px; }
+.lead { color: var(--muted); font-size: 1.12rem; }
+.muted { color: var(--muted); }
+.small { font-size: .88rem; }
+
+.grid { display: grid; gap: 20px; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding: 12px 19px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: .9rem;
+  font-weight: 650;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
+
+.btn.primary {
+  background: var(--dark-button);
+  color: var(--button-text);
+  border-color: var(--dark-button);
+}
+
+.btn:disabled { opacity: .6; cursor: wait; }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.tag {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 6px 11px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  font-size: .79rem;
+  font-weight: 550;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-bg);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 1.02rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: #202d45;
+  color: white;
+  border-radius: 10px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.nav-links a {
+  color: var(--muted);
+  font-size: .87rem;
+  font-weight: 550;
+}
+
+.nav-links a:hover { color: var(--blue); }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: var(--tag-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  font-size: .85rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  border-color: var(--blue);
+}
+
+.theme-toggle:focus-visible,
+.btn:focus-visible,
+.menu-toggle:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.theme-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.menu-toggle { display: none; }
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 115px 0 75px;
+  background: linear-gradient(
+    120deg,
+    var(--hero-start) 42%,
+    var(--hero-end) 100%
+  );
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -170px;
+  top: -160px;
+  background: radial-gradient(
+    circle,
+    rgba(147,197,253,.20),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 940px;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 13px;
+  background: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 30px;
+  font-size: .82rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.hero h1 { max-width: 850px; }
+.hero .lead { max-width: 730px; font-size: 1.17rem; }
+.hero .actions { margin-top: 30px; }
+
+.hero-keywords {
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: .87rem;
+}
+
+/* ========================================
+   METRICS
+======================================== */
+
+.metrics {
+  padding: 40px 0 65px;
+  border-bottom: 1px solid var(--border);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+.metric {
+  padding: 5px 28px;
+  border-right: 1px solid var(--border);
+}
+
+.metric:first-child { padding-left: 0; }
+.metric:last-child { border-right: 0; }
+
+.metric-number {
+  display: block;
+  font-size: clamp(1.9rem,3vw,2.7rem);
+  font-weight: 780;
+  letter-spacing: -.05em;
+  line-height: 1.2;
+}
+
+.metric-label {
+  font-size: .87rem;
+  color: var(--muted);
+}
+
+/* ========================================
+   EXPERTISE
+======================================== */
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.expertise-card {
+  padding: 23px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--surface);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.expertise-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.expertise-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+  background: var(--icon-bg);
+  color: var(--icon-text);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.expertise-card h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.expertise-card p {
+  font-size: .85rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ========================================
+   PROJECTS
+======================================== */
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 290px;
+}
+
+.project-card .tags {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 16px;
+}
+
+.project-symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  background: var(--icon-bg);
+  color: var(--icon-text);
+  border-radius: 12px;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.project-type {
+  color: var(--muted);
+  font-size: .78rem;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+/* ========================================
+   ABOUT
+======================================== */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-art {
+  min-height: 350px;
+  border-radius: 25px;
+  background: linear-gradient(
+    145deg,
+    var(--icon-bg),
+    var(--hero-end)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 35px;
+}
+
+.about-art-inner {
+  font-size: clamp(2rem,4vw,3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -.06em;
+  color: var(--icon-text);
+}
+
+/* ========================================
+   EXPERIENCE
+======================================== */
+
+.timeline {
+  display: grid;
+  gap: 17px;
+}
+
+.experience-card {
+  border-left: 3px solid #9bbcf5;
+}
+
+.experience-date {
+  color: var(--blue);
+  font-size: .83rem;
+  font-weight: 650;
+  margin-bottom: 9px;
+}
+
+.experience-card ul {
+  padding-left: 21px;
+  margin: 12px 0 0;
+}
+
+.experience-card li {
+  margin-bottom: 8px;
+  color: var(--muted);
+}
+
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact-section {
+  padding: 65px 0 95px;
+}
+
+.contact-panel {
+  padding: 43px;
+  border-radius: 24px;
+  background: linear-gradient(
+    120deg,
+    var(--contact-start),
+    var(--contact-end)
+  );
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 35px;
+}
+
+.contact-form-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 16px;
+}
+
+.form-span-2 { grid-column: span 2; }
+
+.field label {
+  display: block;
+  font-size: .84rem;
+  font-weight: 650;
+  margin-bottom: 7px;
+}
+
+.field input,
+.field textarea {
+  display: block;
+  width: 100%;
+  background: var(--input-bg);
+  color: var(--text);
+  border: 1px solid var(--input-border);
+  border-radius: 9px;
+  padding: 12px 13px;
+  outline: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--muted);
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,.11);
+}
+
+.field textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.form-status { font-size: .85rem; }
+.form-status.success { color: var(--success); }
+.form-status.error { color: var(--error); }
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin-top: 25px;
+}
+
+.contact-links a {
+  display: inline-block;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 9px 13px;
+  border-radius: 9px;
+  font-size: .85rem;
+  font-weight: 650;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  color: var(--muted);
+  font-size: .83rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-links a:hover { color: var(--blue); }
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 950px) {
+  .expertise-grid { grid-template-columns: repeat(2,1fr); }
+  .contact-panel { grid-template-columns: 1fr; }
+  .about-layout { grid-template-columns: 1fr; gap: 30px; }
+  .about-art { min-height: 250px; }
+  .nav-links { gap: 14px; }
+}
+
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: inline-block;
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 71px;
+    left: 0;
+    right: 0;
+    padding: 20px 4%;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links.open { display: flex; }
+}
+
+@media (max-width: 740px) {
+  .section { padding: 65px 0; }
+  .hero { padding: 80px 0 65px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2,1fr);
+    gap: 25px 0;
+  }
+
+  .metric:nth-child(2) { border-right: 0; }
+  .metric:nth-child(3) { padding-left: 0; }
+  .contact-panel { padding: 23px; }
+}
+
+@media (max-width: 500px) {
+  .expertise-grid { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .form-span-2 { grid-column: auto; }
+  .contact-form-wrap { padding: 20px; }
+  .metric { padding: 5px 14px; }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero h1 { font-size: 2.65rem; }
+  .brand { font-size: .88rem; }
+  .theme-label { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+
+  body, .btn, .expertise-card {
+    transition: none;
+  }
+}
+</style>
 </head>
+
 <body>
 
+<!-- NAVIGATION -->
 <header class="site-header">
   <nav class="nav container" aria-label="Main navigation">
-    <a class="brand" href="#home">JM.</a>
-    <button class="menu-toggle" id="menuToggle"
-      aria-expanded="false" aria-controls="navLinks"
-      aria-label="Toggle navigation">Menu</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+    <a href="#home" class="brand">
+      <span class="brand-mark">JM</span>
+      <span>Jugal Mahendra</span>
+    </a>
+
+    <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Expertise</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button
+        type="button"
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle color theme"
+        title="Toggle light/dark mode">
+        <span class="theme-icon" id="themeIcon" aria-hidden="true">☾</span>
+        <span class="theme-label" id="themeLabel">Dark</span>
+      </button>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-expanded="false"
+        aria-controls="navLinks">
+        Menu
+      </button>
     </div>
   </nav>
 </header>
 
 <main>
-  <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container hero-inner">
-      <div class="eyebrow">Enterprise Backend Engineering & AI Innovation</div>
-      <h1>Jugal Mahendra</h1>
-      <div class="hero-role">
-        Technology Lead | Senior Java Backend Specialist | GenAI Engineering
-      </div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="availability">
+      <span class="availability-dot"></span>
+      Technology Lead · Java · Generative AI
+    </div>
+
+    <h1>
+      Building scalable systems and practical AI solutions
+      for the enterprise.
+    </h1>
+
+    <p class="lead">
+      I'm Jugal Mahendra, a Technology Lead and Senior Java Backend
+      Specialist with 17+ years of experience delivering enterprise
+      applications, modernizing backend platforms, and improving
+      production reliability.
+    </p>
+
+    <div class="actions">
+      <a class="btn primary" href="#contact">Let's Connect</a>
+      <a class="btn"
+         href="https://www.linkedin.com/in/jugalkmahendra/"
+         target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a class="btn"
+         href="https://github.com/jugalmahendra"
+         target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+
+    <p class="hero-keywords">
+      Java 21 · Spring Boot · Microservices · CI/CD ·
+      Enterprise Modernization · GenAI
+    </p>
+  </div>
+</section>
+
+<!-- METRICS -->
+<section class="metrics" aria-label="Professional achievements">
+  <div class="container metrics-grid">
+    <div class="metric">
+      <span class="metric-number">17+</span>
+      <span class="metric-label">Years of Experience</span>
+    </div>
+    <div class="metric">
+      <span class="metric-number">12+</span>
+      <span class="metric-label">Years Supporting Apple Projects</span>
+    </div>
+    <div class="metric">
+      <span class="metric-number">70%</span>
+      <span class="metric-label">Performance Improvement</span>
+    </div>
+    <div class="metric">
+      <span class="metric-number">98%</span>
+      <span class="metric-label">On-Time Delivery</span>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">Core Expertise</div>
+      <h2>Engineering depth. Modern thinking.</h2>
       <p class="lead">
-        17+ years delivering reliable enterprise applications, modernizing
-        Java platforms, and improving backend performance. Combining
-        expertise in Java, Spring, microservices, and production reliability
-        with practical Generative AI engineering.
+        Technologies and practices I use to deliver reliable,
+        scalable, and maintainable enterprise systems.
       </p>
-      <div class="actions">
-        <a class="btn primary" href="#contact">Let's Connect</a>
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn" href="https://www.linkedin.com/in/jugalkmahendra/"
-           target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="btn" href="https://github.com/jugalmahendra"
-           target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
-
-      <div class="grid grid-3 stats">
-        <div>
-          <span class="stat-number">17+</span>
-          <span class="stat-label">Years of Experience</span>
-        </div>
-        <div>
-          <span class="stat-number">70%</span>
-          <span class="stat-label">Application Performance Improvement</span>
-        </div>
-        <div>
-          <span class="stat-number">98%</span>
-          <span class="stat-label">On-Time Delivery</span>
-        </div>
-      </div>
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section class="section section-alt" id="about">
-    <div class="container">
-      <div class="eyebrow">About Me</div>
-      <h2>Building Reliable Systems. Modernizing for the Future.</h2>
-      <div class="grid grid-2">
-        <div>
-          <p>
-            I am a Technology Lead and Senior Java Backend Specialist with
-            over 17 years of experience developing, modernizing, and
-            supporting enterprise applications, including more than
-            12 years supporting Apple projects through Infosys and
-            IT-SCIENT.
-          </p>
-          <p>
-            My experience covers backend engineering, REST API development,
-            Java and Spring modernization, performance optimization,
-            CI/CD, incident management, and production stability.
-          </p>
-        </div>
-        <div>
-          <p>
-            I have collaborated with distributed engineering teams,
-            coordinated releases, performed code reviews, investigated
-            production incidents, and supported Agile delivery.
-          </p>
-          <p>
-            I am also expanding my engineering capabilities through
-            hands-on Generative AI projects using Python, LangChain,
-            OpenAI APIs, retrieval-augmented generation (RAG), and
-            Model Context Protocol (MCP).
-          </p>
-        </div>
-      </div>
+    <div class="expertise-grid">
+      <article class="expertise-card">
+        <div class="expertise-icon">☕</div>
+        <h3>Java & Spring</h3>
+        <p>Java 21, Spring Framework, Spring Boot, REST APIs.</p>
+      </article>
+
+      <article class="expertise-card">
+        <div class="expertise-icon">◇</div>
+        <h3>Microservices</h3>
+        <p>Backend services, asynchronous processing, Redis caching.</p>
+      </article>
+
+      <article class="expertise-card">
+        <div class="expertise-icon">↗</div>
+        <h3>DevOps & CI/CD</h3>
+        <p>Jenkins, Ansible, Git, Docker, release automation.</p>
+      </article>
+
+      <article class="expertise-card">
+        <div class="expertise-icon">◎</div>
+        <h3>Reliability</h3>
+        <p>Splunk, Grafana, production support, incident RCA.</p>
+      </article>
+
+      <article class="expertise-card">
+        <div class="expertise-icon">✦</div>
+        <h3>Generative AI</h3>
+        <p>Python, LangChain, OpenAI APIs, RAG, MCP, AI agents.</p>
+      </article>
+
+      <article class="expertise-card">
+        <div class="expertise-icon">▧</div>
+        <h3>Cloud Exposure</h3>
+        <p>AWS services, containerization, cloud deployment concepts.</p>
+      </article>
+
+      <article class="expertise-card">
+        <div class="expertise-icon">⌘</div>
+        <h3>System Design</h3>
+        <p>Modernization, API design, performance and scalability.</p>
+      </article>
+
+      <article class="expertise-card">
+        <div class="expertise-icon">♧</div>
+        <h3>Technical Leadership</h3>
+        <p>Agile delivery, code reviews, mentoring, global coordination.</p>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <section class="section" id="skills">
-    <div class="container">
-      <div class="eyebrow">Technical Expertise</div>
-      <h2>Skills & Technologies</h2>
-      <div class="grid grid-3">
-        <article class="card">
-          <h3>Backend Engineering</h3>
-          <p class="muted">Enterprise-grade application development.</p>
-          <div class="tags">
-            <span class="tag">Java 21</span>
-            <span class="tag">Spring Framework</span>
-            <span class="tag">Spring Boot</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">Microservices</span>
-            <span class="tag">CompletableFuture</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3>Data & Performance</h3>
-          <p class="muted">Performance optimization and integration.</p>
-          <div class="tags">
-            <span class="tag">Redis</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Oracle</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">Caching</span>
-            <span class="tag">Concurrency</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3>DevOps & Cloud</h3>
-          <p class="muted">Deployment automation and cloud exposure.</p>
-          <div class="tags">
-            <span class="tag">Jenkins</span>
-            <span class="tag">Git</span>
-            <span class="tag">Ansible</span>
-            <span class="tag">CI/CD</span>
-            <span class="tag">Docker</span>
-            <span class="tag">AWS Exposure</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3>Production Reliability</h3>
-          <p class="muted">Operational support and root cause analysis.</p>
-          <div class="tags">
-            <span class="tag">Splunk</span>
-            <span class="tag">Grafana</span>
-            <span class="tag">RCA</span>
-            <span class="tag">Incident Management</span>
-            <span class="tag">Monitoring</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3>Generative AI</h3>
-          <p class="muted">Independent projects and hands-on learning.</p>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">OpenAI APIs</span>
-            <span class="tag">RAG</span>
-            <span class="tag">MCP</span>
-            <span class="tag">AI Agents</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3>Technical Leadership</h3>
-          <p class="muted">Cross-functional enterprise delivery.</p>
-          <div class="tags">
-            <span class="tag">Agile</span>
-            <span class="tag">Scrum</span>
-            <span class="tag">Code Reviews</span>
-            <span class="tag">Mentorship</span>
-            <span class="tag">Release Planning</span>
-            <span class="tag">System Design</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section section-alt" id="experience">
-    <div class="container">
-      <div class="eyebrow">Professional Journey</div>
-      <h2>Experience</h2>
-      <div class="timeline">
-        <article class="card timeline-card">
-          <div class="meta">October 2021 – Present</div>
-          <h3>Technology Lead — IT-SCIENT | Apple Account</h3>
-          <p class="muted">
-            Continued supporting Apple enterprise applications through
-            IT-SCIENT, focusing on backend engineering, modernization,
-            performance, and production reliability.
-          </p>
-          <ul>
-            <li>Developed and modernized Java/Spring-based backend components and REST APIs supporting enterprise applications.</li>
-            <li>Improved application performance by approximately 70% through backend optimization and asynchronous processing.</li>
-            <li>Applied Redis caching and Java CompletableFuture to improve responsiveness and processing efficiency.</li>
-            <li>Supported CI/CD releases, monitoring, incident investigations, and production recovery.</li>
-            <li>Collaborated with distributed teams on technical design, implementation, code quality, and delivery.</li>
-          </ul>
-        </article>
-
-        <article class="card timeline-card">
-          <div class="meta">July 2012 – October 2021</div>
-          <h3>Technical Analyst / Technology Lead — Infosys | Apple Client</h3>
-          <p class="muted">
-            Progressed through technical and leadership responsibilities
-            while supporting Apple enterprise applications.
-          </p>
-          <ul>
-            <li>Delivered Java/Spring application enhancements, integrations, and backend services.</li>
-            <li>Participated in requirements analysis, design reviews, development, testing, and release planning.</li>
-            <li>Coordinated across US, India, and APAC teams to support enterprise delivery.</li>
-            <li>Conducted troubleshooting, root cause analysis, and production support.</li>
-            <li>Reviewed code, supported secure API development, and improved maintainability.</li>
-          </ul>
-        </article>
-
-        <article class="card timeline-card">
-          <div class="meta">October 2010 – June 2012</div>
-          <h3>Software Engineering — ValueLabs | HP Client</h3>
-          <p class="muted">
-            Enterprise application development, integration, and
-            production support.
-          </p>
-          <ul>
-            <li>Contributed to Java enterprise application development and maintenance.</li>
-            <li>Supported application integration, testing, releases, and troubleshooting.</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <div class="container">
+<!-- PROJECTS -->
+<section class="section section-soft" id="projects">
+  <div class="container">
+    <div class="section-heading">
       <div class="eyebrow">Selected Work</div>
-      <h2>Projects & Engineering Highlights</h2>
-      <div class="grid grid-2">
-        <article class="card project-card">
-          <h3>Enterprise Java Performance Modernization</h3>
-          <p class="muted">Professional engineering experience</p>
-          <p>
-            Modernization and optimization of enterprise Java backend
-            processing using asynchronous execution, Redis caching,
-            and Spring-based services. Contributed to a measured
-            performance improvement of approximately 70%.
-          </p>
-          <div class="tags">
-            <span class="tag">Java 21</span>
-            <span class="tag">Spring</span>
-            <span class="tag">Redis</span>
-            <span class="tag">CompletableFuture</span>
-          </div>
-        </article>
-
-        <article class="card project-card">
-          <h3>ChoreQuest AI — Multi-Agent Family Task Assistant</h3>
-          <p class="muted">Independent GenAI capstone project</p>
-          <p>
-            An AI-assisted family chore management application
-            featuring an Orchestrator Agent for task assignment
-            and a Motivator Agent for engagement and reward
-            recommendations. Uses tool-based workflows and
-            family-oriented incentive tracking.
-          </p>
-          <a class="project-link"
-             href="https://chorequest-web-bay.vercel.app/"
-             target="_blank" rel="noopener noreferrer">
-            View Live Project →
-          </a>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">OpenAI APIs</span>
-            <span class="tag">MCP</span>
-            <span class="tag">AI Agents</span>
-          </div>
-        </article>
-
-        <article class="card project-card">
-          <h3>RAG & Enterprise Knowledge Retrieval</h3>
-          <p class="muted">GenAI engineering exploration</p>
-          <p>
-            Exploring retrieval-augmented generation patterns,
-            document retrieval, contextual question answering,
-            and LLM integration for enterprise knowledge workflows.
-          </p>
-          <div class="tags">
-            <span class="tag">Python</span>
-            <span class="tag">RAG</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">LLMs</span>
-          </div>
-        </article>
-
-        <article class="card project-card">
-          <h3>Production Reliability & Incident Response</h3>
-          <p class="muted">Professional engineering experience</p>
-          <p>
-            Enterprise production monitoring, troubleshooting,
-            root cause analysis, and incident coordination
-            using operational telemetry and cross-team
-            engineering practices.
-          </p>
-          <div class="tags">
-            <span class="tag">Splunk</span>
-            <span class="tag">Grafana</span>
-            <span class="tag">RCA</span>
-            <span class="tag">CI/CD</span>
-          </div>
-        </article>
-      </div>
+      <h2>Featured engineering work.</h2>
+      <p class="lead">
+        Enterprise modernization, backend reliability,
+        and independent Generative AI engineering projects.
+      </p>
     </div>
-  </section>
 
-  <!-- EDUCATION -->
-  <section class="section section-alt" id="education">
-    <div class="container">
-      <div class="eyebrow">Education & Credentials</div>
-      <h2>Education & Certifications</h2>
-      <div class="grid grid-3">
-        <article class="card">
-          <h3>Master of Computer Applications</h3>
-          <p class="muted">Jawaharlal Nehru Technological University, Hyderabad</p>
-        </article>
-        <article class="card">
-          <h3>Bachelor's Degree</h3>
-          <p class="muted">Computer Science, Mathematics & Statistics</p>
-          <p class="muted">Osmania University</p>
-        </article>
-        <article class="card">
-          <h3>Professional Certifications</h3>
-          <p>Certified ScrumMaster</p>
-          <p>Generative AI Engineering — Outskill</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT US -->
-  <section id="contact" class="section">
-    <div class="container">
-      <div class="eyebrow">Get In Touch</div>
-      <h2>Contact Me</h2>
-      <div class="contact-grid">
-        <div class="contact-form-wrap card">
-          <h3>Let's Connect</h3>
-          <p class="lead">
-            Open to senior Java backend engineering, technical
-            leadership, GenAI engineering opportunities, and
-            professional networking.
-          </p>
-
-          <form id="contactForm"
-                action="https://formspree.io/f/mgokzbee"
-                method="POST"
-                class="contact-form">
-
-            <div class="form-grid">
-              <div class="field">
-                <label for="cfName">Name</label>
-                <input type="text" id="cfName" name="name"
-                       required maxlength="120"
-                       autocomplete="name"
-                       placeholder="Your Name">
-                <div id="cfNameHint" class="field-hint"></div>
-              </div>
-
-              <div class="field">
-                <label for="cfEmail">Email</label>
-                <input type="email" id="cfEmail" name="email"
-                       required maxlength="254"
-                       autocomplete="email"
-                       placeholder="your@email.com">
-                <div id="cfEmailHint" class="field-hint"></div>
-              </div>
-
-              <div class="field form-span-2">
-                <label for="cfSubject">Subject</label>
-                <input type="text" id="cfSubject" name="subject"
-                       required maxlength="200"
-                       placeholder="How can I help?">
-                <div id="cfSubjectHint" class="field-hint"></div>
-              </div>
-
-              <div class="field form-span-2">
-                <label for="cfMessage">Message</label>
-                <textarea id="cfMessage" name="message"
-                          required minlength="10"
-                          maxlength="5000"
-                          placeholder="Describe your inquiry..."></textarea>
-                <div id="cfMessageHint" class="field-hint"></div>
-              </div>
-
-              <!-- Spam honeypot -->
-              <div style="position:absolute;left:-9999px"
-                   aria-hidden="true">
-                <label for="cfGotcha">Leave this field blank</label>
-                <input type="text" id="cfGotcha" name="_gotcha"
-                       tabindex="-1" autocomplete="off">
-              </div>
-            </div>
-
-            <input type="hidden" name="_subject"
-                   value="New Portfolio Contact Submission">
-
-            <div class="form-actions">
-              <button type="submit" id="cfSubmit"
-                      class="btn primary">Send Message</button>
-              <div id="cfStatus" class="form-status"
-                   role="status" aria-live="polite"></div>
-            </div>
-          </form>
+    <div class="grid grid-3">
+      <article class="card project-card">
+        <div class="project-top">
+          <span class="project-symbol">▧</span>
+          <div>
+            <h3>Enterprise Java Modernization</h3>
+            <div class="project-type">Professional Engineering</div>
+          </div>
         </div>
 
-        <aside class="card">
-          <h3>Professional Profiles</h3>
-          <p class="muted">
-            Connect with me for technical discussions,
-            professional opportunities, and collaboration.
-          </p>
-          <div class="contact-links">
-            <a href="https://www.linkedin.com/in/jugalkmahendra/"
-               target="_blank" rel="noopener noreferrer">
-              LinkedIn Profile ↗
-            </a>
-            <a href="https://github.com/jugalmahendra"
-               target="_blank" rel="noopener noreferrer">
-              GitHub Profile ↗
-            </a>
+        <p class="muted small">
+          Modernized enterprise Java processing with asynchronous
+          execution and Redis caching, contributing to approximately
+          70% application performance improvement.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Java 21</span>
+          <span class="tag">Spring</span>
+          <span class="tag">Redis</span>
+          <span class="tag">CompletableFuture</span>
+        </div>
+      </article>
+
+      <article class="card project-card">
+        <div class="project-top">
+          <span class="project-symbol">✦</span>
+          <div>
+            <h3>ChoreQuest AI</h3>
+            <div class="project-type">Independent Multi-Agent Project</div>
           </div>
-        </aside>
+        </div>
+
+        <p class="muted small">
+          Built a family task management application using
+          Orchestrator and Motivator agents for task assignment,
+          engagement monitoring, and personalized rewards.
+        </p>
+
+        <a class="project-link"
+           href="https://chorequest-web-bay.vercel.app/"
+           target="_blank" rel="noopener noreferrer">
+          Explore Live Project ↗
+        </a>
+
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">MCP</span>
+          <span class="tag">AI Agents</span>
+        </div>
+      </article>
+
+      <article class="card project-card">
+        <div class="project-top">
+          <span class="project-symbol">◎</span>
+          <div>
+            <h3>Platform Reliability</h3>
+            <div class="project-type">Professional Engineering</div>
+          </div>
+        </div>
+
+        <p class="muted small">
+          Supported enterprise production stability through
+          monitoring, root cause analysis, incident coordination,
+          and controlled releases across distributed teams.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Splunk</span>
+          <span class="tag">Grafana</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">RCA</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container about-layout">
+    <div class="about-art" aria-hidden="true">
+      <div class="about-art-inner">
+        Design.<br>
+        Build.<br>
+        Modernize.
       </div>
     </div>
-  </section>
+
+    <div>
+      <div class="eyebrow">About Me</div>
+      <h2>Technology Lead. Backend specialist. Continuous learner.</h2>
+
+      <p class="lead">
+        I bring 17+ years of enterprise engineering experience,
+        including more than 12 years supporting Apple projects
+        through Infosys and IT-SCIENT.
+      </p>
+
+      <p class="muted">
+        My focus is on Java and Spring backend development,
+        application modernization, REST APIs, performance
+        optimization, CI/CD, and production reliability.
+        I work across technical design, development,
+        troubleshooting, releases, and cross-team collaboration.
+      </p>
+
+      <p class="muted">
+        Alongside enterprise engineering, I build practical
+        Generative AI projects using Python, LangChain,
+        retrieval-augmented generation, and agent-based workflows.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Enterprise Architecture</span>
+        <span class="tag">Technical Leadership</span>
+        <span class="tag">Java Engineering</span>
+        <span class="tag">GenAI Innovation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section section-soft" id="experience">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">Career Journey</div>
+      <h2>Professional experience.</h2>
+    </div>
+
+    <div class="timeline">
+      <article class="card experience-card">
+        <div class="experience-date">October 2021 – Present</div>
+        <h3>Technology Lead — IT-SCIENT | Apple Account</h3>
+        <p class="muted">
+          Continued supporting Apple enterprise applications,
+          focusing on backend engineering, modernization,
+          application performance, and production stability.
+        </p>
+        <ul>
+          <li>Modernized Java/Spring services and backend processing.</li>
+          <li>Improved application performance through asynchronous processing and caching.</li>
+          <li>Supported CI/CD releases, production monitoring, and incident response.</li>
+          <li>Collaborated with global teams on delivery, technical reviews, and troubleshooting.</li>
+        </ul>
+      </article>
+
+      <article class="card experience-card">
+        <div class="experience-date">July 2012 – October 2021</div>
+        <h3>Technical Analyst / Technology Lead — Infosys | Apple Client</h3>
+        <p class="muted">
+          Progressed through technical and leadership roles
+          while supporting Apple enterprise applications.
+        </p>
+        <ul>
+          <li>Delivered Java/Spring enhancements and backend integrations.</li>
+          <li>Participated in requirements, design, development, testing, and releases.</li>
+          <li>Coordinated with US, India, and APAC engineering teams.</li>
+          <li>Supported production troubleshooting, RCA, and code quality.</li>
+        </ul>
+      </article>
+
+      <article class="card experience-card">
+        <div class="experience-date">October 2010 – June 2012</div>
+        <h3>Software Engineering — ValueLabs | HP Client</h3>
+        <p class="muted">
+          Enterprise application development, integration,
+          maintenance, testing, and release support.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">Credentials</div>
+      <h2>Education & certifications.</h2>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Master of Computer Applications</h3>
+        <p class="muted small">
+          Jawaharlal Nehru Technological University, Hyderabad
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Bachelor's Degree</h3>
+        <p class="muted small">
+          Computer Science, Mathematics & Statistics
+        </p>
+        <p class="muted small">Osmania University</p>
+      </div>
+
+      <div class="card">
+        <h3>Professional Certifications</h3>
+        <p class="muted small">Certified ScrumMaster</p>
+        <p class="muted small">
+          Generative AI Engineering — Outskill
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-panel">
+      <div>
+        <div class="eyebrow">Contact</div>
+        <h2>Let's connect.</h2>
+        <p class="lead">
+          Open to senior Java backend engineering,
+          technical leadership, GenAI engineering opportunities,
+          and professional networking.
+        </p>
+
+        <div class="contact-links">
+          <a href="https://www.linkedin.com/in/jugalkmahendra/"
+             target="_blank" rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+          <a href="https://github.com/jugalmahendra"
+             target="_blank" rel="noopener noreferrer">
+            GitHub ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form id="contactForm"
+              action="https://formspree.io/f/mgokzbee"
+              method="POST">
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="cfName">Name *</label>
+              <input id="cfName" name="name" type="text"
+                     required maxlength="120"
+                     autocomplete="name"
+                     placeholder="Your name">
+            </div>
+
+            <div class="field">
+              <label for="cfEmail">Email *</label>
+              <input id="cfEmail" name="email" type="email"
+                     required maxlength="254"
+                     autocomplete="email"
+                     placeholder="your@email.com">
+            </div>
+
+            <div class="field form-span-2">
+              <label for="cfSubject">Subject *</label>
+              <input id="cfSubject" name="subject" type="text"
+                     required maxlength="200"
+                     placeholder="How can I help?">
+            </div>
+
+            <div class="field form-span-2">
+              <label for="cfMessage">Message *</label>
+              <textarea id="cfMessage" name="message"
+                        required minlength="10"
+                        maxlength="5000"
+                        placeholder="Describe your inquiry..."></textarea>
+            </div>
+
+            <!-- Honeypot for spam -->
+            <div style="position:absolute;left:-9999px"
+                 aria-hidden="true">
+              <label for="cfGotcha">Leave blank</label>
+              <input id="cfGotcha" name="_gotcha"
+                     type="text" tabindex="-1"
+                     autocomplete="off">
+            </div>
+          </div>
+
+          <input type="hidden" name="_subject"
+                 value="New Portfolio Contact Submission">
+
+          <div class="form-actions">
+            <button class="btn primary"
+                    type="submit"
+                    id="cfSubmit">
+              Send Message
+            </button>
+
+            <div class="form-status"
+                 id="cfStatus"
+                 role="status"
+                 aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <div class="container">
-    © <span id="year"></span> Jugal Mahendra.
-    Built with HTML, CSS & JavaScript.
+  <div class="container footer-inner">
+    <div>
+      © <span id="year"></span> Jugal Mahendra.
+      All rights reserved.
+    </div>
+
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/jugalkmahendra/"
+         target="_blank" rel="noopener noreferrer">
+        LinkedIn ↗
+      </a>
+      <a href="https://github.com/jugalmahendra"
+         target="_blank" rel="noopener noreferrer">
+        GitHub ↗
+      </a>
+    </div>
   </div>
 </footer>
 
 <script>
-  "use strict";
+"use strict";
 
-  // Current year
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+/* ========================================
+   CURRENT YEAR
+======================================== */
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 
-  // Responsive navigation
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+/* ========================================
+   MOBILE NAVIGATION
+======================================== */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("open");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+menuToggle.addEventListener("click", () => {
+  const open = navLinks.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", String(open));
+});
+
+navLinks.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
   });
+});
 
-  navLinks.querySelectorAll("a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    });
-  });
+/* ========================================
+   LIGHT / DARK MODE
+======================================== */
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = document.getElementById("themeIcon");
+const themeLabel = document.getElementById("themeLabel");
 
-  // Contact form
-  const contactForm = document.getElementById("contactForm");
-  const submitButton = document.getElementById("cfSubmit");
-  const formStatus = document.getElementById("cfStatus");
+const systemTheme = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+);
 
-  contactForm.addEventListener("submit", async (event) => {
-    event.preventDefault();
+function getSavedTheme() {
+  try {
+    return localStorage.getItem("portfolio-theme");
+  } catch (error) {
+    return null;
+  }
+}
 
-    formStatus.textContent = "";
-    formStatus.className = "form-status";
+function applyTheme(theme) {
+  const dark = theme === "dark";
 
-    if (!contactForm.reportValidity()) {
-      return;
-    }
+  document.documentElement.setAttribute(
+    "data-theme", dark ? "dark" : "light"
+  );
 
-    // Honeypot: ignore automated spam submissions
-    if (document.getElementById("cfGotcha").value.trim()) {
-      return;
-    }
+  document.documentElement.style.colorScheme =
+    dark ? "dark" : "light";
 
-    submitButton.disabled = true;
-    submitButton.textContent = "Sending...";
+  themeIcon.textContent = dark ? "☀" : "☾";
+  themeLabel.textContent = dark ? "Light" : "Dark";
 
-    try {
-      const response = await fetch(contactForm.action, {
-        method: "POST",
-        body: new FormData(contactForm),
-        headers: {
-          "Accept": "application/json"
-        }
-      });
+  themeToggle.setAttribute(
+    "aria-label",
+    dark ? "Switch to light mode" : "Switch to dark mode"
+  );
 
-      if (!response.ok) {
-        throw new Error("Form submission failed");
+  themeToggle.setAttribute(
+    "title",
+    dark ? "Switch to light mode" : "Switch to dark mode"
+  );
+
+  document.querySelector(
+    'meta[name="theme-color"]'
+  ).setAttribute(
+    "content",
+    dark ? "#0b1120" : "#ffffff"
+  );
+}
+
+// Sync toggle with the theme applied in <head>
+applyTheme(
+  document.documentElement.getAttribute("data-theme")
+);
+
+themeToggle.addEventListener("click", () => {
+  const current =
+    document.documentElement.getAttribute("data-theme");
+
+  const next = current === "dark" ? "light" : "dark";
+
+  applyTheme(next);
+
+  try {
+    localStorage.setItem("portfolio-theme", next);
+  } catch (error) {
+    // Toggle still works without storage.
+  }
+});
+
+// Follow system changes unless visitor selected a preference
+function handleSystemThemeChange(event) {
+  if (!getSavedTheme()) {
+    applyTheme(event.matches ? "dark" : "light");
+  }
+}
+
+if (systemTheme.addEventListener) {
+  systemTheme.addEventListener(
+    "change", handleSystemThemeChange
+  );
+} else if (systemTheme.addListener) {
+  systemTheme.addListener(handleSystemThemeChange);
+}
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+const contactForm = document.getElementById("contactForm");
+const submitButton = document.getElementById("cfSubmit");
+const formStatus = document.getElementById("cfStatus");
+
+contactForm.addEventListener("submit", async event => {
+  event.preventDefault();
+
+  formStatus.textContent = "";
+  formStatus.className = "form-status";
+
+  if (!contactForm.reportValidity()) return;
+
+  // Ignore spam honeypot submissions
+  if (document.getElementById("cfGotcha").value.trim()) {
+    return;
+  }
+
+  submitButton.disabled = true;
+  submitButton.textContent = "Sending...";
+
+  try {
+    const response = await fetch(contactForm.action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: {
+        "Accept": "application/json"
       }
+    });
 
-      formStatus.textContent =
-        "Thank you! Your message has been sent successfully.";
-      formStatus.classList.add("success");
-      contactForm.reset();
-
-    } catch (error) {
-      formStatus.textContent =
-        "Unable to send your message. Please try again later.";
-      formStatus.classList.add("error");
-    } finally {
-      submitButton.disabled = false;
-      submitButton.textContent = "Send Message";
+    if (!response.ok) {
+      throw new Error("Submission failed");
     }
-  });
+
+    formStatus.textContent =
+      "Thank you! Your message has been sent successfully.";
+
+    formStatus.classList.add("success");
+    contactForm.reset();
+
+  } catch (error) {
+    formStatus.textContent =
+      "Unable to send your message. Please try again.";
+
+    formStatus.classList.add("error");
+
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = "Send Message";
+  }
+});
 </script>
 
 </body>
