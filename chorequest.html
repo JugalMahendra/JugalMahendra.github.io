@@ -7,90 +7,88 @@
   <meta name="theme-color" content="#ffffff">
   <meta name="robots" content="index, follow">
 
-  <title>ChoreQuest AI | Multi-Agent Architecture | Jugal Mahendra</title>
+  <meta name="google-site-verification"
+        content="kulXw9EekQB-znj5vqLneukkipNGbtLUuSbe7SC1vzQ">
+
+  <title>Jugal Mahendra | Senior Java Backend Specialist & Technology Lead</title>
 
   <meta name="description"
-        content="Explore ChoreQuest AI, an independent multi-agent engineering project featuring Orchestrator and Motivator agents, MCP tools, shared state, and personalized family task management.">
+        content="Jugal Mahendra is a Senior Java Backend Specialist and Technology Lead with 17+ years of enterprise engineering experience, including 12+ years supporting Apple projects. Expertise in Java 21, Spring Boot, microservices, production reliability, and GenAI.">
 
-  <link rel="canonical"
-        href="https://jugalmahendra.github.io/chorequest.html">
+  <link rel="canonical" href="https://jugalmahendra.github.io/">
 
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:title"
-        content="ChoreQuest AI | Multi-Agent System Case Study">
+        content="Jugal Mahendra | Senior Java Backend Specialist & Technology Lead">
   <meta property="og:description"
-        content="A practical AI agent engineering case study covering multi-agent orchestration, Model Context Protocol tools, shared application state, and personalized task management.">
-  <meta property="og:url"
-        content="https://jugalmahendra.github.io/chorequest.html">
+        content="17+ years in enterprise Java engineering, technical leadership, modernization, production reliability, and practical GenAI.">
+  <meta property="og:url" content="https://jugalmahendra.github.io/">
+
   <meta name="twitter:card" content="summary">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": "ChoreQuest AI — Multi-Agent Architecture",
-    "description": "Technical case study of an independent AI-assisted family task management project.",
-    "author": {
-      "@type": "Person",
-      "name": "Jugal Mahendra",
-      "url": "https://jugalmahendra.github.io/"
-    },
-    "mainEntityOfPage": "https://jugalmahendra.github.io/chorequest.html",
-    "keywords": [
-      "Multi-Agent Systems",
-      "Model Context Protocol",
-      "MCP",
-      "Python",
+    "@type": "Person",
+    "name": "Jugal Mahendra",
+    "url": "https://jugalmahendra.github.io/",
+    "jobTitle": "Technology Lead",
+    "description": "Senior Java Backend Specialist and Technology Lead with 17+ years of enterprise engineering experience.",
+    "sameAs": [
+      "https://www.linkedin.com/in/jugal-mahendra",
+      "https://github.com/JugalMahendra"
+    ],
+    "knowsAbout": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "REST APIs",
+      "Enterprise Modernization",
+      "Production Reliability",
+      "CI/CD",
+      "Generative AI",
       "LangChain",
-      "AI Agents",
-      "Agent Orchestration",
-      "Generative AI"
+      "Retrieval-Augmented Generation",
+      "Model Context Protocol"
     ]
   }
   </script>
 
   <script>
     (function () {
-      let saved = null;
+      var saved = null;
       try {
         saved = localStorage.getItem("portfolio-theme");
       } catch (e) {}
 
-      const systemDark = window.matchMedia(
+      var dark = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;
 
       document.documentElement.dataset.theme =
-        saved === "dark" ||
-        (saved !== "light" && systemDark)
+        saved === "dark" || (saved !== "light" && dark)
           ? "dark"
           : "light";
     })();
   </script>
 
   <style>
-    /* ===================================
-       DESIGN TOKENS
-    =================================== */
-
     :root {
       color-scheme: light;
       --bg: #ffffff;
       --surface: #ffffff;
       --soft: #f7f9fc;
-      --text: #121722;
-      --muted: #596677;
-      --line: #e4eaf1;
-      --accent: #245bba;
+      --text: #142033;
+      --muted: #5a687a;
+      --line: #e3e9f1;
+      --accent: #245db5;
       --accent-soft: #eaf1ff;
-      --button: #192333;
+      --button: #18253a;
       --button-text: #ffffff;
       --hero-end: #edf4ff;
-      --shadow: 0 12px 36px rgba(20, 38, 64, .05);
-      --code-bg: #f0f4fa;
-      --agent-blue: #eaf2ff;
-      --agent-purple: #f1ebff;
-      --agent-green: #e7f7ef;
+      --shadow: 0 12px 36px rgba(20,38,64,.05);
+      --success: #15803d;
+      --error: #b91c1c;
     }
 
     html[data-theme="dark"] {
@@ -99,18 +97,16 @@
       --surface: #142033;
       --soft: #101b2d;
       --text: #f1f5fb;
-      --muted: #b0bfd2;
+      --muted: #b2bfd0;
       --line: #29394e;
       --accent: #a4c8ff;
       --accent-soft: #233b5b;
       --button: #e6eefb;
       --button-text: #101827;
       --hero-end: #152b4b;
-      --shadow: 0 12px 36px rgba(0, 0, 0, .18);
-      --code-bg: #1b2b41;
-      --agent-blue: #18365a;
-      --agent-purple: #342650;
-      --agent-green: #183c35;
+      --shadow: 0 12px 36px rgba(0,0,0,.18);
+      --success: #86efac;
+      --error: #fca5a5;
     }
 
     * {
@@ -126,14 +122,8 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Inter,
-        Helvetica,
-        Arial,
-        sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Helvetica, Arial, sans-serif;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
@@ -143,13 +133,16 @@
       text-decoration: none;
     }
 
-    button {
+    button, input, textarea {
       font: inherit;
+    }
+
+    button {
       cursor: pointer;
     }
 
     .container {
-      width: min(92%, 1120px);
+      width: min(92%, 1160px);
       margin: auto;
     }
 
@@ -161,20 +154,18 @@
       background: var(--soft);
     }
 
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       line-height: 1.15;
       letter-spacing: -.035em;
     }
 
     h1 {
-      font-size: clamp(2.8rem, 5.7vw, 5rem);
+      font-size: clamp(2.7rem, 5.6vw, 5.1rem);
       margin: 0 0 22px;
     }
 
     h2 {
-      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-size: clamp(2rem, 3.4vw, 3rem);
       margin: 0 0 18px;
     }
 
@@ -188,16 +179,16 @@
     }
 
     .eyebrow {
-      color: var(--accent);
       font-size: .77rem;
       font-weight: 750;
-      letter-spacing: .13em;
       text-transform: uppercase;
-      margin-bottom: 14px;
+      letter-spacing: .13em;
+      color: var(--accent);
+      margin-bottom: 13px;
     }
 
     .lead {
-      font-size: 1.14rem;
+      font-size: 1.13rem;
       color: var(--muted);
     }
 
@@ -206,20 +197,12 @@
     }
 
     .small {
-      font-size: .89rem;
+      font-size: .9rem;
     }
 
     .section-intro {
-      max-width: 770px;
+      max-width: 780px;
       margin-bottom: 34px;
-    }
-
-    .card {
-      padding: 28px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
     }
 
     .grid {
@@ -235,12 +218,20 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    .card {
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
       padding: 12px 19px;
+      gap: 8px;
       border-radius: 11px;
       border: 1px solid var(--line);
       background: var(--surface);
@@ -252,7 +243,7 @@
 
     .btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 22px rgba(0, 0, 0, .08);
+      box-shadow: 0 8px 22px rgba(0,0,0,.08);
     }
 
     .btn.primary {
@@ -261,8 +252,12 @@
       border-color: var(--button);
     }
 
-    .actions,
-    .tags {
+    .btn:disabled {
+      opacity: .65;
+      cursor: wait;
+    }
+
+    .actions, .tags, .links {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
@@ -293,14 +288,14 @@
     }
 
     a:focus-visible,
-    button:focus-visible {
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
       outline: 3px solid var(--accent);
       outline-offset: 3px;
     }
 
-    /* ===================================
-       NAVIGATION
-    =================================== */
+    /* HEADER */
 
     .site-header {
       position: sticky;
@@ -336,11 +331,10 @@
       color: #ffffff;
     }
 
-    .nav-right,
-    .nav-links {
+    .nav-right, .nav-links {
       display: flex;
       align-items: center;
-      gap: 20px;
+      gap: 18px;
     }
 
     .nav-links a {
@@ -353,8 +347,7 @@
       color: var(--accent);
     }
 
-    .theme-toggle,
-    .menu-toggle {
+    .theme-toggle, .menu-toggle {
       background: var(--soft);
       color: var(--text);
       border: 1px solid var(--line);
@@ -362,19 +355,32 @@
       padding: 9px 12px;
       font-size: .86rem;
       font-weight: 650;
-      white-space: nowrap;
     }
 
     .menu-toggle {
       display: none;
     }
 
-    /* ===================================
-       HERO
-    =================================== */
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 100;
+      transform: translateY(-160%);
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    /* HERO */
 
     .hero {
-      padding: 100px 0 85px;
+      padding: 110px 0 75px;
       background: linear-gradient(
         120deg,
         var(--bg) 43%,
@@ -383,11 +389,15 @@
     }
 
     .hero-inner {
-      max-width: 960px;
+      max-width: 980px;
+    }
+
+    .hero h1 {
+      max-width: 900px;
     }
 
     .hero .lead {
-      max-width: 790px;
+      max-width: 800px;
       font-size: 1.18rem;
     }
 
@@ -395,418 +405,360 @@
       margin-top: 28px;
     }
 
-    .back-link {
-      display: inline-block;
-      color: var(--accent);
-      font-size: .88rem;
-      font-weight: 700;
-      margin-bottom: 30px;
+    .hero-details {
+      margin-top: 23px;
+      font-size: .89rem;
+      color: var(--muted);
     }
 
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
-    .project-badge {
+    .status {
       display: inline-flex;
       align-items: center;
+      gap: 9px;
       border-radius: 30px;
       padding: 8px 13px;
       background: var(--accent-soft);
       color: var(--accent);
-      font-size: .82rem;
+      font-size: .83rem;
       font-weight: 650;
       margin-bottom: 24px;
     }
 
-    /* ===================================
-       QUICK FACTS
-    =================================== */
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+    }
 
-    .facts {
-      padding: 38px 0;
+    /* METRICS */
+
+    .metrics {
+      padding: 42px 0 58px;
       border-bottom: 1px solid var(--line);
     }
 
-    .facts-grid {
+    .metrics-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
     }
 
-    .fact strong {
+    .metric {
+      padding: 5px 26px;
+      border-right: 1px solid var(--line);
+    }
+
+    .metric:first-child {
+      padding-left: 0;
+    }
+
+    .metric:last-child {
+      border-right: 0;
+    }
+
+    .metric strong {
       display: block;
-      font-size: 1.05rem;
-      margin-bottom: 5px;
+      font-size: clamp(1.9rem, 3vw, 2.65rem);
+      line-height: 1.2;
+      letter-spacing: -.05em;
     }
 
-    .fact span {
+    .metric span {
+      font-size: .87rem;
       color: var(--muted);
-      font-size: .84rem;
     }
 
-    /* ===================================
-       ARCHITECTURE
-    =================================== */
+    /* SKILLS */
 
-    .architecture {
-      padding: 35px;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      background: var(--surface);
-      box-shadow: var(--shadow);
-    }
-
-    .architecture-stack {
-      max-width: 870px;
-      margin: 0 auto;
-    }
-
-    .architecture-node {
-      padding: 22px;
-      border-radius: 15px;
-      border: 1px solid var(--line);
-      text-align: center;
-      background: var(--soft);
-    }
-
-    .architecture-node strong {
-      display: block;
-      font-size: 1.04rem;
-      margin-bottom: 5px;
-    }
-
-    .architecture-node p {
-      color: var(--muted);
-      font-size: .85rem;
-      margin: 0;
-    }
-
-    .architecture-node.controller {
-      background: var(--accent-soft);
-    }
-
-    .architecture-node.tools {
-      background: var(--agent-green);
-    }
-
-    .architecture-node.state {
-      background: var(--soft);
-    }
-
-    .flow-arrow {
-      text-align: center;
-      color: var(--accent);
-      font-size: 1.55rem;
-      padding: 8px 0;
-      line-height: 1.3;
-    }
-
-    .agent-branch {
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 15px;
     }
 
-    .agent-branch .architecture-node:first-child {
-      background: var(--agent-blue);
-    }
-
-    .agent-branch .architecture-node:last-child {
-      background: var(--agent-purple);
-    }
-
-    .tool-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
-      margin-top: 17px;
-    }
-
-    .tool-chip {
-      padding: 11px 9px;
-      border: 1px solid var(--line);
-      border-radius: 9px;
-      background: var(--surface);
-      font-family: ui-monospace, SFMono-Regular,
-                   Menlo, Consolas, monospace;
-      font-size: .77rem;
-      overflow-wrap: anywhere;
-      text-align: center;
-    }
-
-    .architecture-caption {
-      margin: 20px auto 0;
-      color: var(--muted);
-      font-size: .83rem;
-      text-align: center;
-      max-width: 780px;
-    }
-
-    /* ===================================
-       AGENTS AND TOOLS
-    =================================== */
-
-    .agent-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .agent-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #4a89dd;
-    }
-
-    .agent-card.motivator::before {
-      background: #9b75d5;
-    }
-
-    .agent-card ul {
-      padding-left: 20px;
-      margin-bottom: 0;
-      color: var(--muted);
-    }
-
-    .agent-card li {
+    .skill-card h3 {
       margin-bottom: 10px;
     }
 
-    .tool-card code,
-    .inline-code {
-      font-family: ui-monospace, SFMono-Regular,
-                   Menlo, Consolas, monospace;
-      overflow-wrap: anywhere;
-    }
-
-    .tool-card code {
-      color: var(--accent);
-      font-size: .9rem;
-      font-weight: 700;
-    }
-
-    .tool-card p {
-      margin-top: 12px;
+    .skill-card p {
+      margin: 0;
       color: var(--muted);
+      font-size: .9rem;
+    }
+
+    /* PROJECTS */
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    .project-label {
+      color: var(--accent);
+      font-size: .73rem;
+      font-weight: 750;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 {
+      font-size: 1.35rem;
+    }
+
+    .project-card .note {
       font-size: .88rem;
+      color: var(--muted);
+      border-left: 3px solid var(--line);
+      padding-left: 13px;
+      margin-top: 6px;
     }
 
-    /* ===================================
-       WORKFLOW
-    =================================== */
-
-    .workflow {
-      display: grid;
-      gap: 15px;
-      max-width: 850px;
+    .project-card .links {
+      margin-top: auto;
+      padding-top: 12px;
     }
 
-    .workflow-step {
+    .project-card .tags {
+      margin-top: 20px;
+    }
+
+    /* ACHIEVEMENTS */
+
+    .impact-list {
+      padding-left: 20px;
+      margin: 14px 0 0;
+    }
+
+    .impact-list li {
+      margin-bottom: 12px;
+      color: var(--muted);
+    }
+
+    .impact-list strong {
+      color: var(--text);
+    }
+
+    /* EXPERIENCE */
+
+    .timeline {
+      border-left: 2px solid var(--line);
+      margin-left: 10px;
+      padding-left: 28px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-bottom: 32px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -36px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 3px solid var(--bg);
+    }
+
+    .timeline-meta {
+      color: var(--muted);
+      font-size: .86rem;
+      margin-bottom: 8px;
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
       display: grid;
-      grid-template-columns: 46px 1fr;
-      gap: 18px;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
       align-items: start;
     }
 
-    .step-number {
-      width: 42px;
-      height: 42px;
-      border-radius: 13px;
+    .contact-form {
       display: grid;
-      place-items: center;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 800;
+      gap: 14px;
     }
 
-    .workflow-step .card {
-      padding: 22px;
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
 
-    .workflow-step p {
-      margin: 0;
-      color: var(--muted);
-      font-size: .91rem;
+    .field {
+      display: grid;
+      gap: 7px;
     }
 
-    /* ===================================
-       CODE AND DECISIONS
-    =================================== */
-
-    .code-panel {
-      padding: 23px;
-      background: var(--code-bg);
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      overflow-x: auto;
+    .field label {
+      font-size: .87rem;
+      font-weight: 650;
     }
 
-    pre {
-      margin: 0;
-      font-size: .84rem;
-      line-height: 1.7;
-      font-family: ui-monospace, SFMono-Regular,
-                   Menlo, Consolas, monospace;
-      white-space: pre;
-    }
-
-    .decision-card p {
-      color: var(--muted);
-      font-size: .9rem;
-      margin-bottom: 0;
-    }
-
-    .notice {
-      padding: 18px 22px;
-      background: var(--accent-soft);
-      border-radius: 13px;
+    .field input,
+    .field textarea {
+      width: 100%;
+      background: var(--bg);
       color: var(--text);
-      font-size: .9rem;
-      margin-top: 25px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 13px;
     }
 
-    /* ===================================
-       CTA AND FOOTER
-    =================================== */
-
-    .cta {
-      padding: 75px 0;
+    .field textarea {
+      min-height: 145px;
+      resize: vertical;
     }
 
-    .cta-panel {
-      padding: 55px;
-      border-radius: 24px;
-      background: linear-gradient(
-        120deg,
-        var(--accent-soft),
-        var(--hero-end)
-      );
-      text-align: center;
+    .form-message {
+      font-size: .88rem;
+      min-height: 1.5em;
     }
 
-    .cta-panel p {
-      max-width: 660px;
-      margin: 0 auto 25px;
+    .form-message.success {
+      color: var(--success);
     }
 
-    .cta-panel .actions {
-      justify-content: center;
+    .form-message.error {
+      color: var(--error);
     }
+
+    .contact-options {
+      display: grid;
+      gap: 13px;
+      margin-top: 22px;
+    }
+
+    .contact-option {
+      border: 1px solid var(--line);
+      padding: 15px;
+      border-radius: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-option strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* FOOTER */
 
     footer {
       border-top: 1px solid var(--line);
-      padding: 25px 0;
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: .86rem;
     }
 
     .footer-inner {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       gap: 20px;
-      font-size: .84rem;
-      color: var(--muted);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 18px;
       flex-wrap: wrap;
     }
 
-    /* ===================================
-       RESPONSIVE
-    =================================== */
+    /* RESPONSIVE */
 
     @media (max-width: 1000px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
       .grid-3 {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .nav-links {
+        gap: 12px;
       }
     }
 
-    @media (max-width: 880px) {
+    @media (max-width: 760px) {
+      .section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        padding: 78px 0 60px;
+      }
+
       .menu-toggle {
         display: inline-block;
+      }
+
+      .nav-right {
+        gap: 9px;
       }
 
       .nav-links {
         display: none;
         position: absolute;
-        top: 71px;
+        top: 72px;
         left: 0;
         right: 0;
-        padding: 20px 4%;
-        background: var(--surface);
+        padding: 20px 5%;
+        background: var(--bg);
         border-bottom: 1px solid var(--line);
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
+        gap: 16px;
       }
 
       .nav-links.open {
         display: flex;
       }
-    }
-
-    @media (max-width: 740px) {
-      .section {
-        padding: 64px 0;
-      }
-
-      .hero {
-        padding: 75px 0 65px;
-      }
 
       .grid-2,
-      .grid-3 {
+      .grid-3,
+      .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .facts-grid {
+      .metrics-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .architecture {
+      .metric {
         padding: 18px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
       }
 
-      .tool-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .metric:first-child {
+        padding-left: 18px;
       }
 
-      .cta-panel {
-        padding: 35px 22px;
+      .form-grid {
+        grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 500px) {
-      .agent-branch {
+    @media (max-width: 480px) {
+      .skills-grid {
         grid-template-columns: 1fr;
       }
 
-      .tool-grid {
-        grid-template-columns: 1fr;
+      .card {
+        padding: 22px;
       }
 
-      .workflow-step {
-        grid-template-columns: 35px 1fr;
-        gap: 12px;
+      .brand-name {
+        font-size: .88rem;
       }
 
-      .step-number {
-        width: 34px;
-        height: 34px;
-      }
-
-      .footer-inner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .theme-label {
-        display: none;
+      .theme-toggle,
+      .menu-toggle {
+        padding: 8px 10px;
       }
     }
 
@@ -815,8 +767,11 @@
         scroll-behavior: auto;
       }
 
-      .btn {
-        transition: none;
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
       }
     }
   </style>
@@ -824,1011 +779,926 @@
 
 <body>
 
-<!-- ===================================
-     HEADER
-=================================== -->
+  <a class="skip-link" href="#main">
+    Skip to main content
+  </a>
 
-<header class="site-header">
-  <nav class="nav container" aria-label="Main navigation">
+  <!-- HEADER -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
 
-    <a href="index.html#home" class="brand">
-      <span class="brand-mark">JM</span>
-      <span>Jugal Mahendra</span>
-    </a>
+      <a class="brand" href="#home">
+        <span class="brand-mark">JM</span>
+        <span class="brand-name">Jugal Mahendra</span>
+      </a>
 
-    <div class="nav-right">
+      <div class="nav-right">
 
-      <div class="nav-links" id="navLinks">
-        <a href="index.html#home">Home</a>
-        <a href="#overview">Overview</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#agents">Agents</a>
-        <a href="#mcp-tools">MCP Tools</a>
-        <a href="#workflow">Workflow</a>
-        <a href="index.html#contact">Contact</a>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#expertise">Expertise</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <button
+          class="theme-toggle"
+          type="button"
+          id="themeToggle"
+          aria-label="Toggle dark mode">
+          Theme
+        </button>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          id="menuToggle"
+          aria-controls="navLinks"
+          aria-expanded="false">
+          Menu
+        </button>
+
       </div>
+    </nav>
+  </header>
 
-      <button
-        type="button"
-        class="theme-toggle"
-        id="themeToggle"
-        aria-label="Toggle color theme">
-        <span id="themeIcon" aria-hidden="true">☾</span>
-        <span class="theme-label" id="themeLabel">Dark</span>
-      </button>
+  <main id="main">
 
-      <button
-        type="button"
-        class="menu-toggle"
-        id="menuToggle"
-        aria-expanded="false"
-        aria-controls="navLinks">
-        Menu
-      </button>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
 
-    </div>
-  </nav>
-</header>
+        <div class="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          Austin, Texas Metro · Senior Backend & Technical Leadership
+        </div>
 
-<main>
+        <div class="eyebrow">
+          Enterprise Java Engineering · Technical Leadership · GenAI
+        </div>
 
-<!-- ===================================
-     HERO
-=================================== -->
+        <h1>
+          Senior Java Backend Specialist &amp; Technology Lead.
+        </h1>
 
-<section class="hero" id="home">
-  <div class="container hero-inner">
-
-    <a class="back-link" href="index.html#projects">
-      ← Back to Selected Projects
-    </a>
-
-    <br>
-
-    <span class="project-badge">
-      Independent GenAI Engineering Project
-    </span>
-
-    <h1>ChoreQuest AI.</h1>
-
-    <p class="lead">
-      A multi-agent family task management system
-      that explores how AI agents, MCP tools, and
-      shared application state can work together
-      to personalize task assignments, monitor
-      engagement, and encourage positive family habits.
-    </p>
-
-    <div class="actions">
-
-      <a
-        class="btn primary"
-        href="https://chorequest-web-bay.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Explore Live Application ↗
-      </a>
-
-      <a class="btn" href="#architecture">
-        View Architecture
-      </a>
-
-      <a class="btn" href="#workflow">
-        Explore Workflow
-      </a>
-
-    </div>
-
-    <div class="tags">
-      <span class="tag">Python</span>
-      <span class="tag">LangChain</span>
-      <span class="tag">OpenAI APIs</span>
-      <span class="tag">MCP</span>
-      <span class="tag">Multi-Agent Systems</span>
-      <span class="tag">Shared State</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===================================
-     QUICK FACTS
-=================================== -->
-
-<section class="facts" aria-label="Project summary">
-  <div class="container facts-grid">
-
-    <div class="fact">
-      <strong>2</strong>
-      <span>Specialized Agent Roles</span>
-    </div>
-
-    <div class="fact">
-      <strong>6</strong>
-      <span>Defined MCP Tools</span>
-    </div>
-
-    <div class="fact">
-      <strong>Python</strong>
-      <span>Agent Engineering</span>
-    </div>
-
-    <div class="fact">
-      <strong>Family Tasks</strong>
-      <span>Application Domain</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===================================
-     OVERVIEW
-=================================== -->
-
-<section class="section" id="overview">
-  <div class="container">
-
-    <div class="section-intro">
-      <div class="eyebrow">Project Overview</div>
-
-      <h2>
-        Making everyday responsibilities
-        more engaging.
-      </h2>
-
-      <p class="lead">
-        ChoreQuest AI explores a practical application
-        of agentic AI: coordinating family responsibilities
-        while adapting suggestions to individual capacity,
-        preferences, and engagement.
-      </p>
-    </div>
-
-    <div class="grid grid-3">
-
-      <article class="card">
-        <h3>The Problem</h3>
-
-        <p class="muted small">
-          Traditional chore trackers rely on static
-          assignments and reminders. They may not
-          account for workload, preferences, motivation,
-          or changes in engagement over time.
+        <p class="lead">
+          I build, modernize, and operate enterprise software
+          systems. With 17+ years of engineering experience,
+          including 12+ years supporting Apple projects,
+          I specialize in Java 21, Spring Boot, microservices,
+          performance optimization, production reliability,
+          and technical delivery.
         </p>
-      </article>
 
-      <article class="card">
-        <h3>The Approach</h3>
-
-        <p class="muted small">
-          Separate task coordination from motivational
-          recommendations. Allow specialized agents
-          to request structured application data and
-          actions through MCP tools.
+        <p class="lead">
+          I also develop practical AI-enabled applications
+          using Python, LLM APIs, agent orchestration,
+          retrieval-augmented generation, and MCP tools.
         </p>
-      </article>
 
-      <article class="card">
-        <h3>The Experience</h3>
+        <div class="actions">
+          <a class="btn primary" href="#projects">
+            Explore My Work
+          </a>
 
-        <p class="muted small">
-          Provide a family-friendly interface for
-          tasks, completion tracking, points,
-          and experience-based rewards such as
-          movie night or choosing dinner.
+          <a class="btn" href="mailto:jugalmahendra@gmail.com">
+            Email Me
+          </a>
+
+          <a class="btn"
+             href="https://www.linkedin.com/in/jugal-mahendra"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn ↗
+          </a>
+        </div>
+
+        <p class="hero-details">
+          Java 21 · Spring Boot · REST APIs · Microservices ·
+          Redis · CI/CD · Production Reliability · Python · GenAI
         </p>
-      </article>
 
-    </div>
-  </div>
-</section>
+      </div>
+    </section>
 
-<!-- ===================================
-     ARCHITECTURE
-=================================== -->
+    <!-- CAREER METRICS -->
+    <section class="metrics" aria-label="Career highlights">
+      <div class="container metrics-grid">
 
-<section class="section soft" id="architecture">
-  <div class="container">
+        <div class="metric">
+          <strong>17+</strong>
+          <span>Years in enterprise engineering</span>
+        </div>
 
-    <div class="section-intro">
-      <div class="eyebrow">System Design</div>
+        <div class="metric">
+          <strong>12+</strong>
+          <span>Years supporting Apple projects</span>
+        </div>
 
-      <h2>Multi-agent architecture.</h2>
+        <div class="metric">
+          <strong>70%</strong>
+          <span>Reported application performance improvement</span>
+        </div>
 
-      <p class="lead">
-        The architecture separates user interaction,
-        agent responsibilities, tool execution,
-        and shared application state.
-      </p>
-    </div>
+        <div class="metric">
+          <strong>98%</strong>
+          <span>Reported on-schedule delivery</span>
+        </div>
 
-    <div class="architecture">
+      </div>
+    </section>
 
-      <div class="architecture-stack">
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
 
-        <div class="architecture-node">
-          <strong>Family Web Application</strong>
+        <div class="section-intro">
+          <div class="eyebrow">About Me</div>
 
-          <p>
-            Task dashboard · Family members ·
-            Completion tracking · Points and rewards
+          <h2>
+            Engineering depth. Delivery ownership.
+            Practical innovation.
+          </h2>
+
+          <p class="lead">
+            I am a Technology Lead and Senior Java Backend
+            Specialist with experience delivering and supporting
+            enterprise applications across the full software lifecycle.
           </p>
         </div>
 
-        <div class="flow-arrow" aria-hidden="true">
-          ↓
-        </div>
+        <div class="grid grid-2">
 
-        <div class="architecture-node controller">
-          <strong>Agent Coordination Layer</strong>
+          <div class="card">
+            <h3>Enterprise Engineering</h3>
 
-          <p>
-            Interprets task-management requests
-            and coordinates specialized agent workflows
-          </p>
-        </div>
+            <p class="muted">
+              My background includes Java application modernization,
+              RESTful services, distributed systems, caching,
+              asynchronous processing, performance tuning,
+              production incident analysis, and release engineering.
+            </p>
 
-        <div class="flow-arrow" aria-hidden="true">
-          ↓
-        </div>
-
-        <div class="agent-branch">
-
-          <div class="architecture-node">
-            <strong>Orchestrator Agent</strong>
-
-            <p>
-              Assignment decisions based on
-              capacity, preferences, and task history
+            <p class="muted">
+              I have supported customer-facing applications,
+              coordinated distributed engineering teams,
+              reviewed implementations, and worked with stakeholders
+              on delivery and operational stability.
             </p>
           </div>
 
-          <div class="architecture-node">
-            <strong>Motivator Agent</strong>
+          <div class="card">
+            <h3>AI-Enabled Engineering</h3>
 
-            <p>
-              Engagement analysis, burnout signals,
-              and reward suggestions
+            <p class="muted">
+              I am extending my backend engineering expertise
+              into Generative AI through hands-on projects involving
+              Python, LLM integration, multi-agent workflows,
+              retrieval-augmented generation, and MCP.
+            </p>
+
+            <p class="muted">
+              My focus is on integrating AI capabilities into
+              reliable, observable, maintainable applications,
+              rather than treating AI as a replacement for
+              established engineering practices.
             </p>
           </div>
 
         </div>
+      </div>
+    </section>
 
-        <div class="flow-arrow" aria-hidden="true">
-          ↓
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section soft">
+      <div class="container">
+
+        <div class="section-intro">
+          <div class="eyebrow">Technical Expertise</div>
+
+          <h2>
+            Built around enterprise backend engineering.
+          </h2>
+
+          <p class="lead">
+            Deep Java expertise supported by practical delivery,
+            cloud, DevOps, observability, and emerging AI skills.
+          </p>
         </div>
 
-        <div class="architecture-node tools">
+        <div class="skills-grid">
 
-          <strong>MCP Tool Server</strong>
-
-          <p>
-            Structured tools for reading application
-            context and performing authorized updates
-          </p>
-
-          <div class="tool-grid">
-
-            <div class="tool-chip">list_tasks</div>
-            <div class="tool-chip">assign_task</div>
-            <div class="tool-chip">get_user_capacity</div>
-            <div class="tool-chip">get_engagement_metrics</div>
-            <div class="tool-chip">suggest_reward</div>
-            <div class="tool-chip">update_points_ledger</div>
-
+          <div class="card skill-card">
+            <h3>Java &amp; Spring</h3>
+            <p>
+              Java 8–21, Spring Framework, Spring Boot,
+              Spring Cloud, Maven
+            </p>
           </div>
+
+          <div class="card skill-card">
+            <h3>Backend Architecture</h3>
+            <p>
+              REST APIs, microservices, distributed systems,
+              asynchronous processing
+            </p>
+          </div>
+
+          <div class="card skill-card">
+            <h3>Data &amp; Caching</h3>
+            <p>
+              Oracle, PostgreSQL, MongoDB,
+              Redis, SQL, Flyway
+            </p>
+          </div>
+
+          <div class="card skill-card">
+            <h3>DevOps &amp; CI/CD</h3>
+            <p>
+              Jenkins, Docker, Ansible, Git,
+              Maven, release automation
+            </p>
+          </div>
+
+          <div class="card skill-card">
+            <h3>Cloud &amp; Platforms</h3>
+            <p>
+              PCF, AWS exposure, Linux, Tomcat,
+              Jetty, application deployment
+            </p>
+          </div>
+
+          <div class="card skill-card">
+            <h3>Production Reliability</h3>
+            <p>
+              Splunk, Grafana, incident response,
+              root cause analysis, performance tuning
+            </p>
+          </div>
+
+          <div class="card skill-card">
+            <h3>GenAI Engineering</h3>
+            <p>
+              Python, LangChain, LLM APIs,
+              RAG, MCP, multi-agent workflows
+            </p>
+          </div>
+
+          <div class="card skill-card">
+            <h3>Technical Leadership</h3>
+            <p>
+              Agile/Scrum, code reviews, design discussions,
+              mentoring, distributed teams
+            </p>
+          </div>
+
         </div>
-
-        <div class="flow-arrow" aria-hidden="true">
-          ↕
-        </div>
-
-        <div class="architecture-node state">
-
-          <strong>Shared Application State</strong>
-
-          <p>
-            Task records · User capacity ·
-            Assignment history · Engagement metrics ·
-            Reward and points information
-          </p>
-
-        </div>
-
       </div>
+    </section>
 
-      <p class="architecture-caption">
-        Conceptual architecture illustrating the
-        ChoreQuest agent responsibilities and tool
-        interactions. Individual deployment boundaries
-        may differ from this logical representation.
-      </p>
+    <!-- SELECTED PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
 
-    </div>
+        <div class="section-intro">
+          <div class="eyebrow">Selected Work</div>
 
-  </div>
-</section>
+          <h2>
+            Engineering experience backed by practical projects.
+          </h2>
 
-<!-- ===================================
-     AGENTS
-=================================== -->
-
-<section class="section" id="agents">
-  <div class="container">
-
-    <div class="section-intro">
-      <div class="eyebrow">Agent Responsibilities</div>
-
-      <h2>Two agents. Distinct responsibilities.</h2>
-
-      <p class="lead">
-        Separating task assignment from engagement
-        analysis makes agent behavior easier
-        to understand, test, and evolve.
-      </p>
-    </div>
-
-    <div class="grid grid-2">
-
-      <article class="card agent-card">
-
-        <h3>01. Orchestrator Agent</h3>
-
-        <p class="muted">
-          Coordinates task allocation by evaluating
-          available chores and relevant family context.
-        </p>
-
-        <ul>
-          <li>Retrieve pending tasks.</li>
-          <li>Check user capacity and preferences.</li>
-          <li>Consider assignment history.</li>
-          <li>Recommend suitable assignments.</li>
-          <li>Invoke assignment tools.</li>
-        </ul>
-
-        <div class="tags">
-          <span class="tag">Task Allocation</span>
-          <span class="tag">Capacity Awareness</span>
-          <span class="tag">Coordination</span>
-        </div>
-
-      </article>
-
-      <article class="card agent-card motivator">
-
-        <h3>02. Motivator Agent</h3>
-
-        <p class="muted">
-          Examines engagement patterns and helps
-          personalize encouragement and rewards.
-        </p>
-
-        <ul>
-          <li>Retrieve engagement metrics.</li>
-          <li>Review task completion trends.</li>
-          <li>Identify potential disengagement signals.</li>
-          <li>Suggest non-monetary rewards.</li>
-          <li>Support points-based recognition.</li>
-        </ul>
-
-        <div class="tags">
-          <span class="tag">Engagement</span>
-          <span class="tag">Rewards</span>
-          <span class="tag">Personalization</span>
-        </div>
-
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================================
-     MCP TOOLS
-=================================== -->
-
-<section class="section soft" id="mcp-tools">
-  <div class="container">
-
-    <div class="section-intro">
-      <div class="eyebrow">Model Context Protocol</div>
-
-      <h2>Six tools connecting agents to actions.</h2>
-
-      <p class="lead">
-        MCP provides a structured interface between
-        agent reasoning and application capabilities,
-        reducing the need for agents to manipulate
-        application state directly.
-      </p>
-    </div>
-
-    <div class="grid grid-3">
-
-      <article class="card tool-card">
-        <code>list_tasks</code>
-
-        <p>
-          Retrieves task information, including
-          tasks available for assignment.
-        </p>
-      </article>
-
-      <article class="card tool-card">
-        <code>assign_task</code>
-
-        <p>
-          Associates a task with a selected
-          family member.
-        </p>
-      </article>
-
-      <article class="card tool-card">
-        <code>get_user_capacity</code>
-
-        <p>
-          Retrieves capacity information to help
-          avoid uneven workloads.
-        </p>
-      </article>
-
-      <article class="card tool-card">
-        <code>get_engagement_metrics</code>
-
-        <p>
-          Provides engagement information for
-          motivational analysis.
-        </p>
-      </article>
-
-      <article class="card tool-card">
-        <code>suggest_reward</code>
-
-        <p>
-          Generates or retrieves suitable
-          experience-based reward suggestions.
-        </p>
-      </article>
-
-      <article class="card tool-card">
-        <code>update_points_ledger</code>
-
-        <p>
-          Records points-related changes
-          associated with task completion
-          and recognition.
-        </p>
-      </article>
-
-    </div>
-
-    <div class="notice">
-      <strong>Engineering principle:</strong>
-      Agent decisions and state-changing operations
-      should be separated through explicit tool
-      contracts, input validation, and observable
-      execution results.
-    </div>
-
-  </div>
-</section>
-
-<!-- ===================================
-     WORKFLOW
-=================================== -->
-
-<section class="section" id="workflow">
-  <div class="container">
-
-    <div class="section-intro">
-      <div class="eyebrow">End-to-End Flow</div>
-
-      <h2>From request to assignment.</h2>
-
-      <p class="lead">
-        A representative workflow for assigning
-        pending chores using structured application
-        context and agent coordination.
-      </p>
-    </div>
-
-    <div class="workflow">
-
-      <div class="workflow-step">
-        <div class="step-number">1</div>
-
-        <div class="card">
-          <h3>User Request</h3>
-
-          <p>
-            A family member requests assignment
-            of available tasks.
+          <p class="lead">
+            A combination of professional enterprise engineering
+            contributions and independently developed applications.
           </p>
         </div>
-      </div>
 
-      <div class="workflow-step">
-        <div class="step-number">2</div>
+        <div class="grid grid-2">
 
-        <div class="card">
-          <h3>Retrieve Tasks</h3>
+          <!-- PROJECT 1 -->
+          <article class="card project-card">
 
-          <p>
-            The Orchestrator uses
-            <span class="inline-code">list_tasks</span>
-            to retrieve pending chores.
-          </p>
+            <div class="project-label">
+              Professional Engineering
+            </div>
+
+            <h3>Enterprise Java Modernization</h3>
+
+            <p class="muted small">
+              Contributed to the modernization and optimization
+              of enterprise Java applications supporting
+              customer-facing services. Work included backend
+              design improvements, asynchronous processing,
+              application performance, and production stability.
+            </p>
+
+            <p class="note">
+              Reported outcome: approximately 70% application
+              performance improvement through modernization
+              and processing enhancements.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Java 21</span>
+              <span class="tag">Spring</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">Redis</span>
+              <span class="tag">CompletableFuture</span>
+            </div>
+
+          </article>
+
+          <!-- PROJECT 2: JAVA URL SHORTENER -->
+          <article class="card project-card">
+
+            <div class="project-label">
+              Independent Java Backend Project
+            </div>
+
+            <h3>AI-Assisted URL Shortener</h3>
+
+            <p class="muted small">
+              Built a production-style URL shortening service
+              using Java 21, Spring Boot, PostgreSQL, and Flyway.
+              Implemented short-link creation, HTTP redirects,
+              click analytics, link expiration and deactivation,
+              and API error handling.
+            </p>
+
+            <p class="note">
+              Demonstrates REST API contracts, transactional
+              consistency, database migrations, automated tests,
+              and engineer-verified AI-assisted development.
+            </p>
+
+            <div class="links">
+              <a class="text-link"
+                 href="https://github.com/JugalMahendra/CS-ai-assisted-url-shortener"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                View Source Code ↗
+              </a>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Java 21</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Flyway</span>
+              <span class="tag">Testcontainers</span>
+              <span class="tag">Docker</span>
+            </div>
+
+          </article>
+
+          <!-- PROJECT 3: CHOREQUEST AI -->
+          <article class="card project-card">
+
+            <div class="project-label">
+              Independent Generative AI Project
+            </div>
+
+            <h3>ChoreQuest AI</h3>
+
+            <p class="muted small">
+              Developed an AI-assisted family task management
+              concept with specialized agents for task assignment
+              and motivation. The system explores structured tool
+              invocation, shared application state, and
+              personalized non-monetary rewards.
+            </p>
+
+            <p class="note">
+              Demonstrates practical multi-agent architecture,
+              MCP tool integration, and human-centered
+              AI application design.
+            </p>
+
+            <div class="links">
+              <a class="text-link" href="chorequest.html">
+                Architecture &amp; Case Study →
+              </a>
+
+              <a class="text-link"
+                 href="https://chorequest-web-bay.vercel.app/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Live Application ↗
+              </a>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">LLM APIs</span>
+              <span class="tag">MCP</span>
+              <span class="tag">Multi-Agent AI</span>
+              <span class="tag">Shared State</span>
+            </div>
+
+          </article>
+
+          <!-- PROJECT 4 -->
+          <article class="card project-card">
+
+            <div class="project-label">
+              Professional Engineering
+            </div>
+
+            <h3>Platform Reliability &amp; Delivery</h3>
+
+            <p class="muted small">
+              Supported enterprise application availability,
+              production troubleshooting, deployment coordination,
+              and incident response. Used monitoring and log
+              analysis to investigate failures, identify root
+              causes, and improve operational processes.
+            </p>
+
+            <p class="note">
+              Experience includes production incident management,
+              deployment automation, cross-team coordination,
+              and release readiness.
+            </p>
+
+            <div class="tags">
+              <span class="tag">Splunk</span>
+              <span class="tag">Grafana</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">Ansible</span>
+              <span class="tag">CI/CD</span>
+            </div>
+
+          </article>
+
         </div>
       </div>
+    </section>
 
-      <div class="workflow-step">
-        <div class="step-number">3</div>
+    <!-- ENGINEERING IMPACT -->
+    <section id="impact" class="section soft">
+      <div class="container">
 
-        <div class="card">
-          <h3>Evaluate Capacity</h3>
+        <div class="section-intro">
+          <div class="eyebrow">Engineering Impact</div>
 
-          <p>
-            The agent uses
-            <span class="inline-code">get_user_capacity</span>
-            and relevant context to evaluate
-            assignment suitability.
+          <h2>
+            Measurable results and operational ownership.
+          </h2>
+
+          <p class="lead">
+            Selected achievements from enterprise engineering
+            and technical leadership engagements.
           </p>
         </div>
-      </div>
 
-      <div class="workflow-step">
-        <div class="step-number">4</div>
+        <div class="grid grid-2">
 
-        <div class="card">
-          <h3>Assign Tasks</h3>
+          <div class="card">
+            <h3>Performance &amp; Modernization</h3>
 
-          <p>
-            The Orchestrator invokes
-            <span class="inline-code">assign_task</span>
-            for selected assignments.
-          </p>
+            <ul class="impact-list">
+              <li>
+                <strong>Approximately 70% performance improvement</strong>
+                reported through application modernization
+                and backend processing enhancements.
+              </li>
+
+              <li>
+                Contributed to Java modernization, API
+                improvements, caching strategies, and
+                asynchronous processing.
+              </li>
+
+              <li>
+                Worked on customer-support capabilities,
+                including iPhone repair-pricing functionality.
+              </li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Reliability &amp; Delivery</h3>
+
+            <ul class="impact-list">
+              <li>
+                <strong>98% on-schedule delivery</strong>
+                reported across coordinated engineering work.
+              </li>
+
+              <li>
+                Supported incident response and root cause
+                analysis for production applications.
+              </li>
+
+              <li>
+                Helped improve release processes through
+                CI/CD tooling, automation, and collaboration
+                across distributed teams.
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <div class="workflow-step">
-        <div class="step-number">5</div>
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
 
-        <div class="card">
-          <h3>Review Engagement</h3>
+        <div class="section-intro">
+          <div class="eyebrow">Professional Experience</div>
 
-          <p>
-            The Motivator can use
-            <span class="inline-code">get_engagement_metrics</span>
-            to review engagement and recommend
-            appropriate encouragement.
+          <h2>
+            17+ years delivering enterprise software.
+          </h2>
+
+          <p class="lead">
+            A career focused on Java backend systems,
+            modernization, technical leadership,
+            and production reliability.
           </p>
         </div>
-      </div>
 
-      <div class="workflow-step">
-        <div class="step-number">6</div>
+        <div class="timeline">
 
-        <div class="card">
-          <h3>Update Family Experience</h3>
+          <div class="timeline-item">
+            <h3>Technology Lead — IT-SCIENT</h3>
 
-          <p>
-            Updated assignments and applicable
-            reward or points information are
-            reflected in the application workflow.
-          </p>
+            <div class="timeline-meta">
+              October 2021 – Present · Apple Engagement
+            </div>
+
+            <p class="muted">
+              Enterprise Java backend engineering, application
+              modernization, technical coordination, production
+              support, release management, and operational stability.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>
+              Technology Lead / Technology Analyst — Infosys
+            </h3>
+
+            <div class="timeline-meta">
+              July 2012 – October 2021 · Apple Engagement
+            </div>
+
+            <p class="muted">
+              Supported enterprise applications across design,
+              development, enhancement, production support,
+              troubleshooting, release planning, and Agile delivery.
+              Collaborated with onshore and offshore teams.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Software Engineering — ValueLabs</h3>
+
+            <div class="timeline-meta">
+              October 2010 – June 2012 · HP Engagement
+            </div>
+
+            <p class="muted">
+              Enterprise Java application development and
+              maintenance, backend enhancements,
+              and application support.
+            </p>
+          </div>
+
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <!-- PROFESSIONAL DEVELOPMENT -->
+    <section id="education" class="section soft">
+      <div class="container">
 
-<!-- ===================================
-     EXAMPLE TOOL INTERACTION
-=================================== -->
+        <div class="section-intro">
+          <div class="eyebrow">Professional Development</div>
 
-<section class="section soft" id="example">
-  <div class="container">
+          <h2>
+            Continuous learning across engineering and AI.
+          </h2>
 
-    <div class="section-intro">
-      <div class="eyebrow">Illustrative Example</div>
+          <p class="lead">
+            Combining established enterprise software practices
+            with emerging technologies and hands-on experimentation.
+          </p>
+        </div>
 
-      <h2>Structured tool interaction.</h2>
+        <div class="grid grid-3">
 
-      <p class="lead">
-        The following example illustrates how
-        an agent could request a task assignment
-        through a structured tool interface.
-        It is not a captured production log.
-      </p>
-    </div>
+          <div class="card">
+            <h3>Certified ScrumMaster</h3>
+            <p class="muted small">
+              Agile delivery, team collaboration,
+              iterative planning, and continuous improvement.
+            </p>
+          </div>
 
-    <div class="code-panel">
-<pre>{
-  "tool": "assign_task",
-  "arguments": {
-    "task_id": "task_104",
-    "user_id": "family_member_02"
-  }
-}</pre>
-    </div>
+          <div class="card">
+            <h3>Generative AI Engineering</h3>
+            <p class="muted small">
+              Practical learning through Python, LLM
+              applications, RAG, LangChain, and AI agents.
+            </p>
+          </div>
 
-    <div class="notice">
-      <strong>Why this matters:</strong>
-      Structured tool calls are easier to validate,
-      audit, and test than unconstrained natural-language
-      instructions that directly change application data.
-    </div>
+          <div class="card">
+            <h3>Hands-On Portfolio</h3>
+            <p class="muted small">
+              Independent engineering projects demonstrating
+              backend APIs, automated testing, and
+              AI-enabled application architecture.
+            </p>
+          </div>
 
-  </div>
-</section>
-
-<!-- ===================================
-     ENGINEERING DECISIONS
-=================================== -->
-
-<section class="section" id="decisions">
-  <div class="container">
-
-    <div class="section-intro">
-      <div class="eyebrow">Engineering Perspective</div>
-
-      <h2>Design choices and tradeoffs.</h2>
-
-      <p class="lead">
-        The project provides a practical environment
-        for exploring how agent-based applications
-        can be organized into understandable,
-        testable components.
-      </p>
-    </div>
-
-    <div class="grid grid-3">
-
-      <article class="card decision-card">
-        <h3>Specialized Agents</h3>
-
-        <p>
-          Separating assignment and motivation
-          reduces responsibility overlap,
-          although coordination between agents
-          adds orchestration complexity.
-        </p>
-      </article>
-
-      <article class="card decision-card">
-        <h3>Explicit Tool Contracts</h3>
-
-        <p>
-          MCP tools create a clear interface
-          between agent reasoning and application
-          operations. Input validation remains
-          important for state-changing actions.
-        </p>
-      </article>
-
-      <article class="card decision-card">
-        <h3>Shared Application State</h3>
-
-        <p>
-          Shared task and engagement information
-          supports coordination. Consistency,
-          concurrent updates, and data persistence
-          become important as usage grows.
-        </p>
-      </article>
-
-      <article class="card decision-card">
-        <h3>Human-Centered Rewards</h3>
-
-        <p>
-          Experience-based rewards emphasize
-          family engagement rather than
-          treating every completed task
-          as a financial transaction.
-        </p>
-      </article>
-
-      <article class="card decision-card">
-        <h3>Observability</h3>
-
-        <p>
-          Agent execution traces, tool invocation
-          results, and failure handling are
-          important areas for reliable
-          AI application engineering.
-        </p>
-      </article>
-
-      <article class="card decision-card">
-        <h3>Responsible Evolution</h3>
-
-        <p>
-          The design provides a foundation for
-          evaluating privacy, agent reliability,
-          workload fairness, and safeguards
-          before broader deployment.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================================
-     NEXT STEPS
-=================================== -->
-
-<section class="section soft" id="roadmap">
-  <div class="container">
-
-    <div class="section-intro">
-      <div class="eyebrow">Future Enhancements</div>
-
-      <h2>Where the system can evolve.</h2>
-
-      <p class="lead">
-        Potential next steps for strengthening
-        the application's reliability,
-        scalability, and AI engineering depth.
-      </p>
-    </div>
-
-    <div class="grid grid-3">
-
-      <article class="card">
-        <h3>Persistent Data Layer</h3>
-
-        <p class="muted small">
-          Introduce durable storage, transactional
-          updates, and clearer consistency guarantees
-          for tasks, rewards, and points.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Agent Evaluation</h3>
-
-        <p class="muted small">
-          Create repeatable test scenarios
-          for assignment quality, fairness,
-          tool selection, and recommendation behavior.
-        </p>
-      </article>
-
-      <article class="card">
-        <h3>Production Observability</h3>
-
-        <p class="muted small">
-          Expand structured logs, tracing,
-          error handling, and monitoring
-          across agent and MCP tool execution.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===================================
-     CALL TO ACTION
-=================================== -->
-
-<section class="cta">
-  <div class="container">
-
-    <div class="cta-panel">
-
-      <div class="eyebrow">
-        Explore More
+        </div>
       </div>
+    </section>
 
-      <h2>
-        Enterprise engineering meets practical AI.
-      </h2>
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
 
-      <p class="lead">
-        ChoreQuest AI is part of my independent
-        exploration of agentic AI, building on
-        years of experience designing, modernizing,
-        and supporting enterprise backend systems.
-      </p>
+        <div class="section-intro">
+          <div class="eyebrow">Contact</div>
 
-      <div class="actions">
+          <h2>Let's connect.</h2>
 
-        <a
-          class="btn primary"
-          href="https://chorequest-web-bay.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer">
-          Open Live Application ↗
-        </a>
+          <p class="lead">
+            Interested in discussing senior Java backend
+            engineering, technical leadership, enterprise
+            modernization, or practical AI engineering.
+          </p>
+        </div>
 
-        <a class="btn" href="index.html#projects">
-          Back to Portfolio
-        </a>
+        <div class="contact-grid">
 
-        <a class="btn" href="index.html#contact">
-          Contact Me
-        </a>
+          <div class="card">
+            <h3>Send a Message</h3>
 
+            <p class="muted small">
+              Use the form below for professional inquiries.
+            </p>
+
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/mgokzbee"
+              method="POST"
+              class="contact-form">
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="Portfolio Contact — Jugal Mahendra">
+
+              <div class="form-grid">
+
+                <div class="field">
+                  <label for="contactName">Name</label>
+                  <input
+                    id="contactName"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required>
+                </div>
+
+                <div class="field">
+                  <label for="contactEmail">Email</label>
+                  <input
+                    id="contactEmail"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required>
+                </div>
+
+              </div>
+
+              <div class="field">
+                <label for="contactMessage">Message</label>
+
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  required
+                  minlength="10"></textarea>
+              </div>
+
+              <button
+                class="btn primary"
+                id="contactSubmit"
+                type="submit">
+                Send Message
+              </button>
+
+              <p
+                id="formMessage"
+                class="form-message"
+                role="status"
+                aria-live="polite"></p>
+
+            </form>
+          </div>
+
+          <aside class="card">
+
+            <h3>Professional Links</h3>
+
+            <p class="muted">
+              Prefer a direct introduction? Reach out
+              through email or LinkedIn.
+            </p>
+
+            <div class="contact-options">
+
+              <div class="contact-option">
+                <strong>Email</strong>
+
+                <a class="text-link"
+                   href="mailto:jugalmahendra@gmail.com">
+                  jugalmahendra@gmail.com ↗
+                </a>
+              </div>
+
+              <div class="contact-option">
+                <strong>LinkedIn</strong>
+
+                <a class="text-link"
+                   href="https://www.linkedin.com/in/jugal-mahendra"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Connect on LinkedIn ↗
+                </a>
+              </div>
+
+              <div class="contact-option">
+                <strong>GitHub</strong>
+
+                <a class="text-link"
+                   href="https://github.com/JugalMahendra"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Explore My Repositories ↗
+                </a>
+              </div>
+
+              <div class="contact-option">
+                <strong>Location</strong>
+
+                <span class="muted small">
+                  Austin / Leander, Texas, USA
+                </span>
+              </div>
+
+            </div>
+          </aside>
+
+        </div>
       </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+
+      <span>
+        © <span id="year"></span> Jugal Mahendra.
+        All rights reserved.
+      </span>
+
+      <span>
+        Senior Java Backend Specialist · Technology Lead · Austin, TX
+      </span>
 
     </div>
+  </footer>
 
-  </div>
-</section>
+  <!-- INTERACTIONS -->
+  <script>
+    (function () {
+      "use strict";
 
-</main>
+      const root = document.documentElement;
+      const themeToggle = document.getElementById("themeToggle");
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
 
-<!-- ===================================
-     FOOTER
-=================================== -->
+      const year = document.getElementById("year");
+      year.textContent = new Date().getFullYear();
 
-<footer>
-  <div class="container footer-inner">
+      // Theme toggle
+      function updateThemeButton() {
+        const dark = root.dataset.theme === "dark";
 
-    <span>
-      © <span id="year"></span> Jugal Mahendra.
-      All rights reserved.
-    </span>
+        themeToggle.textContent = dark ? "☀ Light" : "☾ Dark";
 
-    <div class="footer-links">
+        themeToggle.setAttribute(
+          "aria-label",
+          dark ? "Switch to light mode" : "Switch to dark mode"
+        );
 
-      <a href="index.html">Home</a>
+        themeToggle.setAttribute("aria-pressed", String(dark));
+      }
 
-      <a
-        href="https://www.linkedin.com/in/jugalkmahendra/"
-        target="_blank"
-        rel="noopener noreferrer">
-        LinkedIn ↗
-      </a>
+      updateThemeButton();
 
-      <a
-        href="https://github.com/jugalmahendra"
-        target="_blank"
-        rel="noopener noreferrer">
-        GitHub ↗
-      </a>
+      themeToggle.addEventListener("click", function () {
+        const next = root.dataset.theme === "dark"
+          ? "light"
+          : "dark";
 
-    </div>
+        root.dataset.theme = next;
 
-  </div>
-</footer>
+        try {
+          localStorage.setItem("portfolio-theme", next);
+        } catch (e) {}
 
-<script>
-"use strict";
+        updateThemeButton();
+      });
 
-/* ===================================
-   FOOTER YEAR
-=================================== */
+      // Mobile navigation
+      function closeMenu() {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+      menuToggle.addEventListener("click", function () {
+        const isOpen = navLinks.classList.toggle("open");
 
-/* ===================================
-   MOBILE MENU
-=================================== */
+        menuToggle.setAttribute(
+          "aria-expanded",
+          String(isOpen)
+        );
+      });
 
-const menuToggle =
-  document.getElementById("menuToggle");
+      navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+      });
 
-const navLinks =
-  document.getElementById("navLinks");
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          closeMenu();
+        }
+      });
 
-function closeMenu() {
-  navLinks.classList.remove("open");
-  menuToggle.setAttribute("aria-expanded", "false");
-}
+      // Formspree contact form
+      const form = document.getElementById("contactForm");
+      const submitButton = document.getElementById("contactSubmit");
+      const formMessage = document.getElementById("formMessage");
 
-menuToggle.addEventListener("click", () => {
-  const open = navLinks.classList.toggle("open");
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-  menuToggle.setAttribute(
-    "aria-expanded",
-    String(open)
-  );
-});
+        if (!form.reportValidity()) return;
 
-navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", closeMenu);
-});
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
 
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
-    closeMenu();
-  }
-});
+        formMessage.textContent = "";
+        formMessage.className = "form-message";
 
-/* ===================================
-   THEME TOGGLE
-=================================== */
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              "Accept": "application/json"
+            }
+          });
 
-const themeToggle =
-  document.getElementById("themeToggle");
+          if (!response.ok) {
+            throw new Error("Submission failed");
+          }
 
-const themeIcon =
-  document.getElementById("themeIcon");
+          formMessage.textContent =
+            "Thank you. Your message has been submitted successfully.";
 
-const themeLabel =
-  document.getElementById("themeLabel");
+          formMessage.classList.add("success");
+          form.reset();
 
-const systemTheme = window.matchMedia(
-  "(prefers-color-scheme: dark)"
-);
+        } catch (error) {
+          formMessage.textContent =
+            "Unable to send the message right now. " +
+            "Please contact me directly by email.";
 
-function savedTheme() {
-  try {
-    return localStorage.getItem("portfolio-theme");
-  } catch (e) {
-    return null;
-  }
-}
+          formMessage.classList.add("error");
 
-function applyTheme(theme) {
-  const dark = theme === "dark";
+        } finally {
+          submitButton.disabled = false;
+          submitButton.textContent = "Send Message";
+        }
+      });
 
-  document.documentElement.dataset.theme =
-    dark ? "dark" : "light";
-
-  themeIcon.textContent = dark ? "☀" : "☾";
-  themeLabel.textContent = dark ? "Light" : "Dark";
-
-  themeToggle.setAttribute(
-    "aria-label",
-    dark
-      ? "Switch to light mode"
-      : "Switch to dark mode"
-  );
-
-  themeToggle.title =
-    dark
-      ? "Switch to light mode"
-      : "Switch to dark mode";
-
-  document.querySelector(
-    'meta[name="theme-color"]'
-  ).content = dark ? "#0b1220" : "#ffffff";
-}
-
-applyTheme(
-  document.documentElement.dataset.theme
-);
-
-themeToggle.addEventListener("click", () => {
-  const next =
-    document.documentElement.dataset.theme === "dark"
-      ? "light"
-      : "dark";
-
-  applyTheme(next);
-
-  try {
-    localStorage.setItem(
-      "portfolio-theme",
-      next
-    );
-  } catch (e) {}
-});
-
-function systemChanged(event) {
-  if (!savedTheme()) {
-    applyTheme(
-      event.matches ? "dark" : "light"
-    );
-  }
-}
-
-if (systemTheme.addEventListener) {
-  systemTheme.addEventListener(
-    "change",
-    systemChanged
-  );
-} else if (systemTheme.addListener) {
-  systemTheme.addListener(systemChanged);
-}
-</script>
+    })();
+  </script>
 
 </body>
 </html>
